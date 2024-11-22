@@ -1,0 +1,12 @@
+portfolio-website/
+  ├── index.html               # Homepage
+  ├── projects.html            # Project Page
+  ├── resume.html              # Resume Page
+  ├── contact.html             # Contact Page
+  ├── css/
+  │    └── style.css           # CSS Stylesheet
+  ├── js/
+  │    └── main.js             # JavaScript File
+  ├── images/
+  │    └── (all images here)   # Image assets
+  └── fonts/                   # (optional fonts here)
