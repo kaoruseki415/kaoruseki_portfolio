@@ -53,14 +53,14 @@ body {
 .hero-section {
     padding: 50px 20px;
     background: #FFFFFF;
-    text-align: center; /* Center the content of the hero section */
+    text-align: left; /* Center the content of the hero section */
 }
 .intro-section {
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: center; /* Center align hero content */
+    justify-content: left; /* Center align hero content */
 }
 .profile-photo {
     width: 300px;
