@@ -57,7 +57,7 @@ body {
 }
 .intro-section {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: left; /* Center align hero content */
@@ -69,6 +69,7 @@ body {
     object-fit: cover;
     margin-top: 30px;
 }
+
 .intro-text {
     max-width: 600px;
     text-align: left;
