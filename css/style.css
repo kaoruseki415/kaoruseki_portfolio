@@ -19,6 +19,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .branding {
     display: flex;
@@ -28,6 +29,7 @@ body {
     display: flex;
     gap: 20px; /* Space between buttons */
     margin-left: auto; /* Align navigation buttons to the right */
+    padding-right: 10px;
 }
 
 /* Button styling */
@@ -52,11 +54,14 @@ body {
     margin:0 auto;
 }
 .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
     padding: 50px 20px;
     background: #FFFFFF;
-    text-align: left; /* Center the content of the hero section */
-    justify-content: center;
-    
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the section in the middle of the page */
 }
 .intro-section {
     display: flex;
@@ -64,6 +69,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center; /* Center align hero content */
+    max-width: 100%;
 }
 .profile-photo {
     width: 250px;
@@ -94,8 +100,9 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-items: center; /* Ensure all projects are centered */
-    max-width: 100%; /* Ensure the project grid does not overflow */
+    justify-items: center; /* Center items horizontally */
+    width: 100%; /* Remove max-width to prevent overflow */
+    margin: 0 auto; /* Center the project grid */
 }
 .project-card {
     padding: 20px;
@@ -105,8 +112,8 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 100%; /* Ensure cards adapt to grid size */
-    max-width: 300px; /* Limit the maximum width of each card */
+    width: 100%; 
+    max-width: 280px; /* Set a consistent max-width for each card */
 }
 .project-card img {
     width: 100%; 
