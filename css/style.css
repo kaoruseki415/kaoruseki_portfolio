@@ -24,28 +24,24 @@ body {
     display: flex;
     flex-direction: column;
 }
-.main-nav {
-    display: flex;
-    gap: 20px;
-}
 .navbar .buttons {
-    display: flex; /* Align buttons horizontally */
-    gap: 10px; /* Space between buttons */
+    display: flex; 
+    gap: 10px; 
 }
 
 /* Button styling */
 .button {
     text-decoration: none;
-    color: #52C7FB; /* Change text color to match theme */
-    padding: 8px 12px; /* Button padding */
-    border: 1px solid #52C7FB; /* Border color */
-    border-radius: 25px; /* Rounded corners */
+    color: #52C7FB; 
+    padding: 8px 12px; 
+    border: 1px solid #52C7FB; 
+    border-radius: 25px; 
     transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
-    background-color: #52C7FB; /* Background color on hover */
-    color: #fff; /* Text color on hover */
+    background-color: #52C7FB; 
+    color: #fff; 
 }
 .container {
     max-width: 1200px;
@@ -109,7 +105,7 @@ body {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 40px; /* Adjust spacing to ensure icons are not overlapping */
     margin-top: 20px;
 }
 .footer-link {
@@ -120,6 +116,7 @@ body {
     gap: 8px;
     font-size: 1.2em;
 }
+
 /* Icon Styles */
 .iconamoon--email-light, .logos--linkedin-icon, .devicon--github {
     display: inline-block;
