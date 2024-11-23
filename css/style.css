@@ -57,7 +57,7 @@ body {
 }
 .intro-section {
     display: flex;
-    align-items: left;
+    align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: left; /* Center align hero content */
