@@ -60,7 +60,7 @@ body {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: left; /* Center align hero content */
+    justify-content: center; /* Center align hero content */
 }
 .profile-photo {
     width: 250px;
