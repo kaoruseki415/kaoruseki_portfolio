@@ -67,6 +67,7 @@ body {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    margin-top: 20px;
 }
 .intro-text {
     max-width: 600px;
