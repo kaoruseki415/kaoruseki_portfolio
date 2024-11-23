@@ -63,18 +63,20 @@ body {
     justify-content: left; /* Center align hero content */
 }
 .profile-photo {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
 }
 .intro-text {
     max-width: 600px;
+    text-align: left;
 }
 .intro-heading {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #52C7FB;
+    text-align: left;
 }
 .project-section {
     margin: 40px 0;
