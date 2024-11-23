@@ -27,24 +27,18 @@ body {
     display: flex;
     gap: 20px;
 }
-.main-nav a {
-    color: #333;
+.nav-button {
+    color: #52C7FB;
     text-decoration: none;
     font-size: 1.2em;
-    padding: 10px;
-    border: 2px solid transparent;
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-.main-nav a:hover {
-    color: #52C7FB;
-    border-color: #52C7FB;
-}
-.resume-button {
-    background-color: #52C7FB;
-    color: white;
     padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    border: 2px solid #52C7FB;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-button:hover {
+    background-color: #52C7FB;
+    color: #FFFFFF;
 }
 .container {
     max-width: 1200px;
@@ -108,7 +102,7 @@ body {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 40px;  /* Adjusted to provide more space */
+    gap: 40px;
     margin-top: 20px;
 }
 .footer-link {
@@ -116,10 +110,9 @@ body {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 8px;  /* Space between the icon and text */
+    gap: 8px;
     font-size: 1.2em;
 }
-
 /* Icon Styles */
 .iconamoon--email-light, .logos--linkedin-icon, .devicon--github {
     display: inline-block;
