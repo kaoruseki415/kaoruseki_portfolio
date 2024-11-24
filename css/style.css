@@ -32,53 +32,53 @@ body {
     padding-right: 10px;
 }
 
-/* Button styling */
+/* Button Styling */
 .button {
     text-decoration: none;
     color: #52C7FB; /* Change text color to match theme */
-    padding: 8px 12px; /* Button padding */
+    padding: 10px 20px; /* Ensure consistent button size */
     border: 1px solid #52C7FB; /* Border color */
     border-radius: 25px; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s;
-    display: inline-block; /* Ensure it behaves like a button */
-    text-align: center; /* Center text inside button */
-    vertical-align: middle; /* Align buttons vertically */
-    margin-top: 0; /* Ensure there's no extra margin causing misalignment */
+    display: inline-flex; /* Ensure consistent alignment */
+    align-items: center; /* Vertical center text inside button */
+    justify-content: center; /* Horizontal center text inside button */
+    width: 130px; /* Fixed width to ensure consistency */
+    box-sizing: border-box; /* Include border in width calculation */
+    text-align: center;
 }
 
+/* Button hover effect */
 .button:hover {
     background-color: #52C7FB; /* Background color on hover */
     color: #fff; /* Text color on hover */
 }
-/* Dropdown Menu Styles */
-.dropdown .button {
-    padding: 8px 12px; /* Ensure padding is consistent */
-    border: 1px solid #52C7FB; /* Ensure border is consistent */
-    border-radius: 25px; /* Rounded corners */
-    background-color: transparent; /* Set background to transparent to match other buttons */
-    text-align: center;
-    color: #52C7FB; /* Match the color */
-}
+
+/* Dropdown Button Styling */
 .dropdown {
     position: relative;
     display: inline-block;
-    vertical-align: middle; /* Ensure dropdown button aligns vertically with others */
+    vertical-align: middle; /* Align with other buttons vertically */
+    width: 130px; /* Ensure the same width as other buttons */
 }
 
+/* Dropdown Content Styling */
 .dropdown-content {
     display: none;
     position: absolute;
+    left: 0; /* Align dropdown content with button */
     background-color: #ffffff;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     min-width: 160px;
     z-index: 1;
-    margin-top: 5px; /* Adds some space between the button and the dropdown */
     border-radius: 8px;
+    margin-top: 10px; /* Adds some space between the button and the dropdown */
+    padding: 0; /* Remove extra padding for dropdown content */
 }
 
 .dropdown-content a {
     color: #333;
-    padding: 12px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     display: block;
     transition: background-color 0.3s;
@@ -88,6 +88,7 @@ body {
     background-color: #f1f1f1;
 }
 
+/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
