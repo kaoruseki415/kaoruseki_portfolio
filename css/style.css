@@ -40,6 +40,8 @@ body {
     border: 1px solid #52C7FB; /* Border color */
     border-radius: 25px; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Ensure it behaves like a button */
+    text-align: center; /* Center text inside button */
 }
 
 .button:hover {
@@ -47,6 +49,14 @@ body {
     color: #fff; /* Text color on hover */
 }
 /* Dropdown Menu Styles */
+.dropdown .button {
+    padding: 8px 12px; /* Ensure padding is consistent */
+    border: 1px solid #52C7FB; /* Ensure border is consistent */
+    border-radius: 25px; /* Rounded corners */
+    background-color: transparent; /* Set background to transparent to match other buttons */
+    text-align: center;
+    color: #52C7FB; /* Match the color */
+}
 .dropdown {
     position: relative;
     display: inline-block;
