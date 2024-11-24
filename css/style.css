@@ -42,6 +42,8 @@ body {
     transition: background-color 0.3s, color 0.3s;
     display: inline-block; /* Ensure it behaves like a button */
     text-align: center; /* Center text inside button */
+    vertical-align: middle; /* Align buttons vertically */
+    margin-top: 0; /* Ensure there's no extra margin causing misalignment */
 }
 
 .button:hover {
@@ -60,6 +62,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    vertical-align: middle; /* Ensure dropdown button aligns vertically with others */
 }
 
 .dropdown-content {
