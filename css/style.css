@@ -50,6 +50,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-left: 20px; /* Add some margin for spacing between buttons */
 }
 
 .dropdown-content {
@@ -59,6 +60,7 @@ body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     min-width: 160px;
     z-index: 1;
+    margin-top: 10px; /* Adds space between the button and the dropdown */
 }
 
 .dropdown-content a {
