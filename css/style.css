@@ -96,8 +96,9 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-content {
+/* Ensure dropdown content stays open */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
     display: block;
 }
 .container {
