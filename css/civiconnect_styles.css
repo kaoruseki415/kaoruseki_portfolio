@@ -1,0 +1,111 @@
+/* CSS for the CiviConnect portfolio page */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #52c7fb;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #52c7fb;
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 20px;
+    background: url("images/civiconnect_group_pic.jpg") no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #fff;
+    position: relative;
+}
+
+.hero-image p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about {
+    grid-column: span 2;
+}
+
+.about h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.solution {
+    grid-column: span 2;
+}
+
+.solution h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.solution p {
+    font-size: 1.2em;
+    color: #666;
+}
