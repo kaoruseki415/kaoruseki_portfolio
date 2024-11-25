@@ -105,9 +105,10 @@ body {
     min-width: 160px;
     z-index: 1;
     border-radius: 8px;
-    margin-top: 10px; /* Adds some space between the button and the dropdown */
-    padding: 0; /* Remove extra padding for dropdown content */
-    transition: opacity 0.3s ease-in-out;
+    margin-top: 5px; /* Adds some space between the button and the dropdown */
+    padding-top: 10px; /* Remove extra padding for dropdown content */
+    padding-bottom: 10px;
+    transition: visibilty 0.3s, opacity 0.3s ease;
     opacity: 0;
 }
 
@@ -126,6 +127,7 @@ body {
 /* Ensure dropdown content stays open */
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
+    visibility: visible;
     display: block;
     opacity: 1;
 }
