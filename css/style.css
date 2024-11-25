@@ -13,6 +13,20 @@ body {
     padding: 20px;
     border-bottom: 1px solid #ddd;
 }
+.home-link{
+    color: inherit;
+    display: inline-block;
+    color: #020007;
+    text-decoration: none;
+}
+.home-link:hover h1 {
+    color: #52C7FB; 
+    cursor: pointer; 
+}
+.logo-link:hover p {
+    color: #52C7FB;
+    cursor: pointer;
+}
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -53,6 +67,15 @@ body {
     background-color: #52C7FB; /* Background color on hover */
     color: #fff; /* Text color on hover */
 }
+
+/* Dropdown Button Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; /* Align with other buttons vertically */
+    width: 130px; /* Ensure the same width as other buttons */
+}
+
 /* Dropdown Menu Styles */
 .dropdown .button {
     padding: 8px 12px; /* Ensure padding is consistent */
@@ -61,13 +84,12 @@ body {
     background-color: transparent; /* Set background to transparent to match other buttons */
     text-align: center;
     color: #52C7FB; /* Match the color */
+    cursor: pointer;
 }
-/* Dropdown Button Styling */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle; /* Align with other buttons vertically */
-    width: 130px; /* Ensure the same width as other buttons */
+
+.dropdown .button:hover {
+    background-color: #52C7FB; 
+    color: white; 
 }
 
 /* Dropdown Content Styling */
@@ -82,6 +104,8 @@ body {
     border-radius: 8px;
     margin-top: 10px; /* Adds some space between the button and the dropdown */
     padding: 0; /* Remove extra padding for dropdown content */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
 }
 
 .dropdown-content a {
@@ -100,6 +124,7 @@ body {
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
     display: block;
+    opacity: 1;
 }
 .container {
     max-width: 1200px;
