@@ -78,12 +78,15 @@ body {
 
 /* Dropdown Menu Styles */
 .dropdown .button {
-    padding: 8px 12px; /* Ensure padding is consistent */
+    padding: 10px 20px;
+    width: 130px;
+    height: 45px;
     border: 1px solid #52C7FB; /* Ensure border is consistent */
     border-radius: 25px; /* Rounded corners */
     background-color: transparent; /* Set background to transparent to match other buttons */
     text-align: center;
     color: #52C7FB; /* Match the color */
+    box-sizing: border-box;
     cursor: pointer;
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="civiconnect_styles.css">
+    <link rel="stylesheet" href="css/civiconnect_styles.css">
     <script src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +21,10 @@
             </div>
            <nav class="navbar">
     <div class="buttons">
-        <a href="#home" class="button">Home</a>
+        <a href="index.html" class="button">Home</a>
         <div class="dropdown">
-            <a href="#" class="button">Projects</a>
+            <button class="button"> Projects </button>
+            <!-- <a href="#" class="button">Projects</a> -->
             <div class="dropdown-content">
                 <a href="ezfix.html">EZfix</a>
                 <a href="bizchat.html">BizChat</a>
@@ -39,39 +40,46 @@
     </header>
     <section class="hero">
         <div class="hero-image">
-            <img src="images/CiviConnect.png" alt="CiviConnect Logo">
-            <p>Linking Lives, One Connection At A Time</p>
+            <img src="images/CiviConnect.png" alt="CiviConnect Logo" style="border-radius: 15px;" 
+            style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3>Linking Lives, One Connection At A Time</h3>
         </div>
     </section>
 
     <section class="content">
-        <div class="about">
-            <h2>What is CiviConnect?</h2>
-            <p>CiviConnect is the team working toward social impact to serve connectivity to underserved minority.</p>
-        </div>
-        <div class="images">
-            <img src="images/civiconnect_grouppic.jpeg" alt="CiviConnect group picture">
-            <img src="images/meshwifinetwork.png" alt="Business Plan Details">
-        </div>
-        <div class="solution">
-            <h3>What is the solution?</h3>
-            <p>We come up with solar-powered mesh networking.</p>
-        </div>
-    </section>
+        <div class="about-images">
+            <div class="images">
+                <img src="images/civiconnect_group_picture.jpg" alt="CiviConnect group picture">     
+            </div>
+            <div class="about">
+                <h2>What is CiviConnect?</h2>
+                <p>CiviConnect is a diverse team of passionate individuals dedicated to creating innovative solutions for underserved communities. Our mission is to provide reliable, affordable, and sustainable internet connectivity to rural and remote areas. By harnessing renewable energy and decentralized networking, we aim to bridge the digital divide, ensuring that no community is left disconnected, especially in times of crisis. Our ultimate goal is to empower these communities by enabling access to essential services, education, and opportunities through dependable communication infrastructure.</p>
+            </div>
 
- <footer class="main-footer">
-        <h2>Feel Free to Reach Out To Me!</h2>
+            <div class="images">
+                <img src="images/meshwifinetwork.png" alt="Mesh Wi-Fi Network">
+            </div>
+            <div class="solution">
+                <h3>What is the solution?</h3>
+                <p>CiviConnect is a solar-powered, self-healing mesh Wi-Fi network designed to provide reliable and affordable internet connectivity to underserved communities, including refugee camps and rural areas.</p>
+            </div>
+        </div>
+    </section>         
+
+    <footer class="main-footer">
+        <h2>Contact Me!</h2>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/kaoru-seki415" target="_blank" aria-label="LinkedIn" class="footer-link">
-                <span class="logos--linkedin-icon"></span> LinkedIn
+                <i class="fab fa-linkedin"></i> LinkedIn
             </a>
             <a href="mailto:kaoru2020@umbc.edu" target="_blank" aria-label="Email" class="footer-link">
-                <span class="iconamoon--email-light"></span> Email
+                <i class="fas fa-envelope"></i> Email
             </a>
             <a href="https://github.com/kaoruseki415" target="_blank" aria-label="GitHub" class="footer-link">
-                <span class="devicon--github"></span> GitHub
+                <i class="fab fa-github"></i> GitHub
             </a>
         </div>
     </footer>
+    
 </body>
 </html>

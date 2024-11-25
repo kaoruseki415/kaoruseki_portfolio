@@ -7,6 +7,7 @@
     <script src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Kaoru Seki - Portfolio</title>
 </head>
@@ -23,7 +24,8 @@
     <div class="buttons">
         <a href="#home" class="button">Home</a>
         <div class="dropdown">
-            <a href="#" class="button">Projects</a>
+            <button class="button"> Projects </button>
+            <!-- <a href="#" class="button">Projects</a> -->
             <div class="dropdown-content">
                 <a href="ezfix.html">EZfix</a>
                 <a href="bizchat.html">BizChat</a>
@@ -54,28 +56,28 @@
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <a href="ezfix.html">
+                    <a href="ezfix.html" style="text-decoration: none;">
                     <img src="images/EZfix.png" alt="EZfix Web Application">
                     <h3>EZfix Web Application</h3>
                     </a>
                     <p>Graphic design project for a housing services platform. UX design to connect users with services like plumbing, handyman.</p>
                 </div>
                 <div class="project-card">
-                    <a href="see.html">
+                    <a href="see.html" style="text-decoration: none;">
                     <img src="images/SEEe.jpg" alt="SEEe Project">
                     <h3>SEEe</h3>
                     </a>
                     <p>Virtual reality project to understand sensemaking and interaction in immersive environments.</p>
                 </div>
                 <div class="project-card">
-                    <a href="civiconnect.html">
+                    <a href="civiconnect.html" style="text-decoration: none;">
                     <img src="images/CiviConnect.png" alt="CiviConnect Project">
                     <h3>CiviConnect</h3>
                     </a>
                     <p>Solar-powered mesh network for Wi-Fi, focusing on providing connectivity solutions to underserved communities.</p>
                 </div>
                 <div class="project-card">
-                    <<a href="bizchat.html">
+                    <a href="bizchat.html" style="text-decoration: none;">
                     <img src="images/bizchat.png" alt="BizChat Assistant">
                     <h3>BizChat LLM Design</h3>
                     </a>
@@ -86,18 +88,19 @@
     </div>
 
     <footer class="main-footer">
-        <h2>Feel Free to Reach Out To Me!</h2>
+        <h2>Contact Me!</h2>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/kaoru-seki415" target="_blank" aria-label="LinkedIn" class="footer-link">
-                <span class="logos--linkedin-icon"></span> LinkedIn
+                <i class="fab fa-linkedin"></i> LinkedIn
             </a>
             <a href="mailto:kaoru2020@umbc.edu" target="_blank" aria-label="Email" class="footer-link">
-                <span class="iconamoon--email-light"></span> Email
+                <i class="fas fa-envelope"></i> Email
             </a>
             <a href="https://github.com/kaoruseki415" target="_blank" aria-label="GitHub" class="footer-link">
-                <span class="devicon--github"></span> GitHub
+                <i class="fab fa-github"></i> GitHub
             </a>
         </div>
     </footer>
+    
 </body>
 </html>
