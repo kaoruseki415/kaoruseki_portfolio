@@ -1,86 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/civiconnect_styles.css">
     <script src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Kaoru Seki - Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="main-header">
-        <div class="header-content">
-            <div class="branding">
-                <a href="index.html" class="home-link">
-                    <h1>Kaoru Seki</h1>
-                    <p>UX Researcher/Designer</p>
-                </a>
-            </div>
-           <nav class="navbar">
-    <div class="buttons">
-        <a href="index.html" class="button">Home</a>
-        <div class="dropdown">
-            <button class="button"> Projects </button>
-            <!-- <a href="#" class="button">Projects</a> -->
-            <div class="dropdown-content">
+      <div class="header-content">
+        <div class="branding">
+          <a href="index.html" class="home-link">
+            <h1>Kaoru Seki</h1>
+            <p>UX Researcher/Designer</p>
+          </a>
+        </div>
+        <nav class="navbar">
+          <div class="buttons">
+            <a href="index.html" class="button">Home</a>
+            <div class="dropdown">
+              <button class="button"> Projects </button>
+              <!-- <a href="#" class="button">Projects</a> -->
+              <div class="dropdown-content">
                 <a href="ezfix.html">EZfix</a>
                 <a href="bizchat.html">BizChat</a>
                 <a href="seee.html">SEEe</a>
                 <a href="civiconnect.html">CiviConnect</a>
+              </div>
             </div>
-        </div>
-        <a href="/resume.pdf" class="button" target="_blank">Resume</a>
-    </div>
-</nav>
-
-        </div>
+            <a href="/resume.pdf" class="button" target="_blank">Resume</a>
+          </div>
+        </nav>
+      </div>
     </header>
+
+    <!-- CityConnect Banner -->
     <section class="hero">
-        <div class="hero-image">
-            <img src="images/CiviConnect.png" alt="CiviConnect Logo" style="border-radius: 15px;" 
-            style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            <h3>Linking Lives, One Connection At A Time</h3>
-        </div>
+      <div class="hero-content">
+        <img src="images/CiviConnect.png" alt="CiviConnect Logo" class="hero-logo" width="100%">
+        <h3 class="hero-tagline">Linking Lives, One Connection at a Time</h3>
+      </div>
     </section>
 
+    <!-- Content Section -->
     <section class="content">
-        <div class="about-images">
-            <div class="images">
-                <img src="images/civiconnect_group_picture.jpg" alt="CiviConnect group picture">     
-            </div>
-            <div class="about">
-                <h2>What is CiviConnect?</h2>
-                <p>CiviConnect is a diverse team of passionate individuals dedicated to creating innovative solutions for underserved communities. Our mission is to provide reliable, affordable, and sustainable internet connectivity to rural and remote areas. By harnessing renewable energy and decentralized networking, we aim to bridge the digital divide, ensuring that no community is left disconnected, especially in times of crisis. Our ultimate goal is to empower these communities by enabling access to essential services, education, and opportunities through dependable communication infrastructure.</p>
-            </div>
-
-            <div class="images">
-                <img src="images/meshwifinetwork.png" alt="Mesh Wi-Fi Network">
-            </div>
-            <div class="solution">
-                <h3>What is the solution?</h3>
-                <p>CiviConnect is a solar-powered, self-healing mesh Wi-Fi network designed to provide reliable and affordable internet connectivity to underserved communities, including refugee camps and rural areas.</p>
-            </div>
+      <div class="each-contents">
+        <!-- About Image -->
+        <div class="image-container">
+          <img src="images/civiconnect_group_picture.jpg" alt="CiviConnect group picture" width="500px">
         </div>
-    </section>         
+        <!-- About Content -->
+        <div class="text-container">
+          <h2>What is CiviConnect?</h2>
+          <p>
+            CiviConnect is a diverse team of passionate individuals dedicated to creating innovative solutions for underserved communities. Our mission is to provide reliable, affordable, and sustainable internet connectivity to rural and remote areas. By harnessing renewable energy and decentralized networking, we aim to bridge the digital divide, ensuring that no community is left disconnected, especially in times of crisis. Our ultimate goal is to empower these communities by enabling access to essential services, education, and opportunities through dependable communication infrastructure.
+          </p>
+        </div>
+      </div>
+
+      <div class="each-contents">
+        <!-- Solution Image -->
+        <div class="image-container">
+          <img src="images/meshwifinetwork.png" alt="Mesh Wi-Fi Network" width="500px">
+        </div>
+        <!-- Solution Content -->
+        <div class="text-container">
+          <h3>What is the solution?</h3>
+          <p>
+            CiviConnect is a solar-powered, self-healing mesh Wi-Fi network designed to provide reliable and affordable internet connectivity to underserved communities, including refugee camps and rural areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presentation Video -->
+    <section class="civiconnect-video">
+      <video controls>
+        <source src="civiconnect_video.mov">
+      </video>
+    </section>
+
 
     <footer class="main-footer">
-        <h2>Contact Me!</h2>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/kaoru-seki415" target="_blank" aria-label="LinkedIn" class="footer-link">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="mailto:kaoru2020@umbc.edu" target="_blank" aria-label="Email" class="footer-link">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://github.com/kaoruseki415" target="_blank" aria-label="GitHub" class="footer-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
+      <h2>Contact Me!</h2>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/kaoru-seki415" target="_blank" aria-label="LinkedIn" class="footer-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:kaoru2020@umbc.edu" target="_blank" aria-label="Email" class="footer-link">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/kaoruseki415" target="_blank" aria-label="GitHub" class="footer-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
     </footer>
-    
-</body>
+
+  </body>
 </html>
