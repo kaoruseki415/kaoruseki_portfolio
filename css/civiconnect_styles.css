@@ -202,7 +202,7 @@ body {
 /* Style for BizChat button (reuse for CiviConnect link) */
 #bizchat-link,
 .civiconnect-slide a {
-  display: inline-flex;
+  display: block;
   align-items: center;
   justify-content: center;
   text-decoration: none;
@@ -211,8 +211,7 @@ body {
   border: 1px solid #52C7FB; /* Border color */
   border-radius: 25px; /* Rounded corners */
   padding: 10px 20px; /* Button padding */
-  width: 200px; /* Adjusted width for better presentation */
-  box-sizing: border-box; /* Include padding and border in size */
+  width: 500px; /* Adjusted width for better presentation */
   text-align: center; /* Center align text */
   margin: 20px auto; /* Center button horizontally */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
