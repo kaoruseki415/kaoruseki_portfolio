@@ -43,3 +43,21 @@ ul li, ol li {
   background-color: #52C7FB; /* Keep hover color for active state */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for pressed state */
 }
+
+/* Animation: Sliding underline */
+#bizchat-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start at the middle */
+  width: 0; /* Start with no underline */
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Show underline on hover */
+#bizchat-link:hover::after {
+  width: 100%; /* Expand to full width */
+  left: 0; /* Align to the left */
+}
