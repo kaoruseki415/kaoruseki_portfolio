@@ -210,7 +210,7 @@ body {
 
 /* Style the button for proper centering and appearance */
 .civiconnect-slide a {
-  display: block; /* For consistent alignment */
+  display: inline-flex; /* For consistent alignment */
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
   width: 500px; /* Keep the original button size */
