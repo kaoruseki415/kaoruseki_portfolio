@@ -219,7 +219,7 @@ body {
   border: 1px solid #52C7FB; /* Border color */
   border-radius: 25px; /* Rounded corners */
   padding: 10px 20px; /* Button padding */
-  width: 200px; /* Adjust width to fit the button content */
+  width: 500px; /* Adjust width to fit the button content */
   box-sizing: border-box; /* Include padding and border in size */
   text-align: center; /* Center align text */
   margin: 20px auto; /* Center button horizontally */
