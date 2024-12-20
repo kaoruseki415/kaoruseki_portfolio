@@ -131,21 +131,6 @@ body {
   margin-top: 20px;
 }
 
-
-
-/* .hero-image p { */
-/*   font-size: 1.2em; */
-/*   margin-top: 20px; */
-/* } */
-
-.content {
-  /* max-width: 1200px; */
-  width:  90%;
-  margin: 40px auto;
-  padding: 20px;
-  gap: 20px;
-}
-
 .about-section {
   display: flex;
   flex-wrap: wrap;
@@ -159,12 +144,34 @@ body {
   gap: 20px;
 }
 
-.each-contents {
-  display: flex;
-  align-items: center;
+@media (min-width: 950px){
+  .content {
+    max-width: 1200px;
+    width:  90%;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
 }
 
-.each-contents div {
+@media (max-width: 949px){
+  .content {
+    display: box;
+    width:  90%;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.each-contents {
+}
+
+.content div {
   margin: 5px;
 }
 

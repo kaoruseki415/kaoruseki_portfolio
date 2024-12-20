@@ -1,239 +1,239 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 body {
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 .main-header {
-    background: #FFFFFF;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+  background: #FFFFFF;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
 }
 .home-link{
-    color: inherit;
-    display: inline-block;
-    color: #020007;
-    text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  color: #020007;
+  text-decoration: none;
 }
 .home-link:hover h1 {
-    color: #52C7FB; 
-    cursor: pointer; 
+  color: #52C7FB; 
+  cursor: pointer; 
 }
 .logo-link:hover p {
-    color: #52C7FB;
-    cursor: pointer;
+  color: #52C7FB;
+  cursor: pointer;
 }
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .branding {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .navbar .buttons {
-    display: flex;
-    gap: 20px; /* Space between buttons */
-    margin-left: auto; /* Align navigation buttons to the right */
-    padding-right: 10px;
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  margin-left: auto; /* Align navigation buttons to the right */
+  padding-right: 10px;
 }
 
 /* Button Styling */
 .button {
-    text-decoration: none;
-    color: #52C7FB; /* Change text color to match theme */
-    padding: 10px 20px; /* Ensure consistent button size */
-    border: 1px solid #52C7FB; /* Border color */
-    border-radius: 25px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s;
-    display: inline-flex; /* Ensure consistent alignment */
-    align-items: center; /* Vertical center text inside button */
-    justify-content: center; /* Horizontal center text inside button */
-    width: 130px; /* Fixed width to ensure consistency */
-    box-sizing: border-box; /* Include border in width calculation */
-    text-align: center;
+  text-decoration: none;
+  color: #52C7FB; /* Change text color to match theme */
+  padding: 10px 20px; /* Ensure consistent button size */
+  border: 1px solid #52C7FB; /* Border color */
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-flex; /* Ensure consistent alignment */
+  align-items: center; /* Vertical center text inside button */
+  justify-content: center; /* Horizontal center text inside button */
+  width: 130px; /* Fixed width to ensure consistency */
+  box-sizing: border-box; /* Include border in width calculation */
+  text-align: center;
 }
 
 /* Button hover effect */
 .button:hover {
-    background-color: #52C7FB; /* Background color on hover */
-    color: #fff; /* Text color on hover */
+  background-color: #52C7FB; /* Background color on hover */
+  color: #fff; /* Text color on hover */
 }
 
 /* Dropdown Button Styling */
 .dropdown {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle; /* Align with other buttons vertically */
-    width: 130px; /* Ensure the same width as other buttons */
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; /* Align with other buttons vertically */
+  width: 130px; /* Ensure the same width as other buttons */
 }
 
 /* Dropdown Menu Styles */
 .dropdown .button {
-    padding: 10px 20px;
-    width: 130px;
-    height: 45px;
-    border: 1px solid #52C7FB; /* Ensure border is consistent */
-    border-radius: 25px; /* Rounded corners */
-    background-color: transparent; /* Set background to transparent to match other buttons */
-    text-align: center;
-    color: #52C7FB; /* Match the color */
-    box-sizing: border-box;
-    cursor: pointer;
+  padding: 10px 20px;
+  width: 130px;
+  height: 45px;
+  border: 1px solid #52C7FB; /* Ensure border is consistent */
+  border-radius: 25px; /* Rounded corners */
+  background-color: transparent; /* Set background to transparent to match other buttons */
+  text-align: center;
+  color: #52C7FB; /* Match the color */
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .dropdown .button:hover {
-    background-color: #52C7FB; 
-    color: white; 
+  background-color: #52C7FB; 
+  color: white; 
 }
 
 /* Dropdown Content Styling */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    left: 0; /* Align dropdown content with button */
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 8px;
-    margin-top: 5px; /* Adds some space between the button and the dropdown */
-    padding-top: 10px; /* Remove extra padding for dropdown content */
-    padding-bottom: 10px;
-    transition: visibilty 0.3s, opacity 0.3s ease;
-    opacity: 0;
+  display: none;
+  position: absolute;
+  left: 0; /* Align dropdown content with button */
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 8px;
+  margin-top: 5px; /* Adds some space between the button and the dropdown */
+  padding-top: 10px; /* Remove extra padding for dropdown content */
+  padding-bottom: 10px;
+  transition: visibilty 0.3s, opacity 0.3s ease;
+  opacity: 0;
 }
 
 .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /* Ensure dropdown content stays open */
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
-    visibility: visible;
-    display: block;
-    opacity: 1;
+  visibility: visible;
+  display: block;
+  opacity: 1;
 }
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    overflow-x: hidden; /* Prevent contents from overflowing horizontally */
-    margin:0 auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent contents from overflowing horizontally */
+  margin:0 auto;
 }
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers items vertically */
-    justify-content: center; /* Centers items horizontally */
-    padding: 50px 20px;
-    background: #FFFFFF;
-    max-width: 1200px;
-    margin: 0 auto; /* Centers the section in the middle of the page */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  padding: 50px 20px;
+  background: #FFFFFF;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the section in the middle of the page */
 }
 .intro-section {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align hero content */
-    max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align hero content */
+  max-width: 100%;
 }
 .profile-photo {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 30px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 30px;
 }
 
 .intro-text {
-    max-width: 600px;
-    text-align: left;
+  max-width: 600px;
+  text-align: left;
 }
 .intro-heading {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #52C7FB;
-    text-align: left;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #52C7FB;
+  text-align: left;
 }
 .project-section {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 .project-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center; /* Center items horizontally */
-    width: 100%; /* Remove max-width to prevent overflow */
-    margin: 0 auto; /* Center the project grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center; /* Center items horizontally */
+  width: 100%; /* Remove max-width to prevent overflow */
+  margin: 0 auto; /* Center the project grid */
 }
 .project-card {
-    padding: 20px;
-    border: 1px solid #ddd;
-    background: #fff;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    width: 100%; 
-    max-width: 280px; /* Set a consistent max-width for each card */
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%; 
+  max-width: 280px; /* Set a consistent max-width for each card */
 }
 .project-card img {
-    width: 100%; 
-    height: auto;
-    border-radius: 10px;
+  width: 100%; 
+  height: auto;
+  border-radius: 10px;
 }
 .project-card:hover {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 .main-footer {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
 }
 .footer-link {
-    color: #52C7FB;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1.2em;
+  color: #52C7FB;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2em;
 }
 /* Icon Styles */
 .iconamoon--email-light, .logos--linkedin-icon, .devicon--github {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
 }
