@@ -175,21 +175,35 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.civiconnect-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.civiconnect-presentation {
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100px;
   padding: 20px;
 }
 
-.civiconnect-video video {
+.civiconnect-video {
   max-width: 100%;
-  height: auto;
+  text-align: center;
+}
+
+.civiconnect-video iframe {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.civiconnect-slide {
+  text-align: center;
+}
+
+.civiconnect-slide a {
+  text-decoration: none;
+  color: black;
+}
+
+.civiconnect-slide a:hover {
+  text-decoration: underline;
+}
 
 .about, .solution {
   display: flex;
