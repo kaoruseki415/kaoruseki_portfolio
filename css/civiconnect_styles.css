@@ -225,6 +225,7 @@ body {
   border-radius: 25px; /* Rounded corners */
   box-sizing: border-box; /* Include border in width calculation */
   transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  white-space: nowrap;
 }
 
 /* Hover and active effects */
