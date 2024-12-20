@@ -210,21 +210,21 @@ body {
 
 /* Style the button for proper centering and appearance */
 .civiconnect-slide a {
-  display: inline-flex; /* Keeps the button properties intact */
+  display: block; /* For consistent alignment */
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
+  width: 500px; /* Keep the original button size */
+  margin: 20px auto;
+  padding: 10px 20px; /* Ensure consistent button size */
+  text-align: center;
+  font-size: 16px;
   text-decoration: none;
-  color: #52C7FB; /* Text color */
+  color: #52C7FB; /* Change text color to match theme */
   background-color: transparent; /* Transparent background */
-  border: 1px solid #52C7FB; /* Border color */
+  border: 1px solid #52C7FB; /* Add border */
   border-radius: 25px; /* Rounded corners */
-  padding: 10px 20px; /* Button padding */
-  width: 500px; /* Adjust width to fit the button content */
-  box-sizing: border-box; /* Include padding and border in size */
-  text-align: center; /* Center align text */
-  margin: 20px auto; /* Center button horizontally */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-sizing: border-box; /* Include border in width calculation */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
 }
 
 /* Hover and active effects */
