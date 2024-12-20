@@ -206,36 +206,34 @@ body {
   text-align: center;
 }
 
-.civiconnect-slide a {
-  display: inline-flex; /* For consistent alignment */
+#bizchat-link {
+  display: block; /* For consistent alignment */
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
-  text-decoration: none;
+  width: 500px; /* Keep the original button size */
+  margin: 20px auto;
+  padding: 10px 20px; /* Ensure consistent button size */
   text-align: center;
   font-size: 16px;
-  color: #52C7FB; /* Match theme */
+  text-decoration: none;
+  color: #52C7FB; /* Change text color to match theme */
   background-color: transparent; /* Transparent background */
   border: 1px solid #52C7FB; /* Add border */
   border-radius: 25px; /* Rounded corners */
-  padding: 10px 20px; /* Ensure consistent button size */
-  width: 130px; /* Fixed width */
   box-sizing: border-box; /* Include border in width calculation */
-  margin: 20px auto; /* Center the button with margins */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
 }
 
 /* Hover effect */
-.civiconnect-slide a:hover {
+#bizchat-link:hover {
   background-color: #52C7FB; /* Background color on hover */
   color: white; /* Text color on hover */
-  text-decoration: none; /* Prevent underline on hover */
 }
 
 /* Active effect */
-.civiconnect-slide a:active {
-  background-color: #52C7FB;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Pressed shadow effect */
+#bizchat-link:active {
+  background-color: #52C7FB; /* Keep hover color for active state */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for pressed state */
 }
 
 .about, .solution {
