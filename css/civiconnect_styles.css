@@ -177,9 +177,11 @@ body {
 
 .images img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  object-fit: cover; /* Crop the image to fit the specified height */
+  object-position: center; /* Align the cropped area to the center */
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 }
 
 .civiconnect-presentation {
