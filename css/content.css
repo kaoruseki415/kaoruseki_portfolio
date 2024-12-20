@@ -13,6 +13,17 @@
   color: #333; /* Dark text color for consistency */
   margin: 20px auto;
 }
+/* Consistent image alignment with text */
+.hero img {
+  display: block;
+  max-width: 100%; /* Ensure image does not overflow */
+  width: 90%; /* Match text alignment width */
+  max-height: 400px; /* Set consistent height */
+  object-fit: cover; /* Maintain aspect ratio and crop excess */
+  margin: 20px auto; /* Center-align image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
 ul li, ol li {
   margin-left: 20px;
