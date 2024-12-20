@@ -4,7 +4,7 @@
   padding: 0 20px; /* Add consistent padding */
   max-width: 1200px; /* Match homepage width */
   width: 90%; /* Ensure responsiveness */
-  text-align: center; /* Center-align text */
+  text-align: left; /* Center-align text */
 }
 
 /* Headings style to match homepage */
