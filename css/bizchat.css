@@ -11,27 +11,31 @@
 }
 
 #bizchat-link {
-  display: block;
-  width: 500px;
+  display: block; /* For consistent alignment */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  width: 500px; /* Keep the original button size */
   margin: 20px auto;
+  padding: 10px 20px; /* Ensure consistent button size */
   text-align: center;
-  padding: 10px 20px;
   font-size: 16px;
-  color: white;
-  background-color: #007bff;
   text-decoration: none;
-  border-radius: 25px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: #52C7FB; /* Change text color to match theme */
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #52C7FB; /* Add border */
+  border-radius: 25px; /* Rounded corners */
+  box-sizing: border-box; /* Include border in width calculation */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
 }
 
+/* Hover effect */
 #bizchat-link:hover {
-  background-color: #52C7FB;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  background-color: #52C7FB; /* Background color on hover */
+  color: white; /* Text color on hover */
 }
 
+/* Active effect */
 #bizchat-link:active {
-  background-color: #52C7FB;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #52C7FB; /* Keep hover color for active state */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for pressed state */
 }
-
