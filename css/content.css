@@ -12,6 +12,16 @@
   margin: 20px auto;
 }
 
+.hero img {
+  display: block; /* Ensure it behaves as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 80%; /* Keep the width at 80% */
+  max-width: 1200px; /* Optional: Set a max width for large screens */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: contain; /* Ensure the image doesn't distort */
+}
+
+
 ul li, ol li {
   margin-left: 20px;
 }
