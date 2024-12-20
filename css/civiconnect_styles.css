@@ -199,18 +199,40 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.civiconnect-slide {
-  text-align: center;
-}
-
+/* Style for BizChat button (reuse for CiviConnect link) */
+#bizchat-link,
 .civiconnect-slide a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: black;
+  color: #52C7FB; /* Text color */
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #52C7FB; /* Border color */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Button padding */
+  width: 200px; /* Adjusted width for better presentation */
+  box-sizing: border-box; /* Include padding and border in size */
+  text-align: center; /* Center align text */
+  margin: 20px auto; /* Center button horizontally */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Hover effect for buttons */
+#bizchat-link:hover,
 .civiconnect-slide a:hover {
-  text-decoration: underline;
+  background-color: #52C7FB; /* Blue background */
+  color: white; /* White text */
 }
+
+/* Active effect for buttons */
+#bizchat-link:active,
+.civiconnect-slide a:active {
+  background-color: #52C7FB; /* Same as hover color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Pressed shadow effect */
+}
+
 
 .about, .solution {
   display: flex;
