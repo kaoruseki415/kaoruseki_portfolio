@@ -1,13 +1,17 @@
-#bizchat-content {
-  margin: 0 40px;
+.main-content {
+  margin: 40px 40px;
   padding: 0 30px;
 }
 
-#bizchat-content h1 {
+.main-content h1 {
   display: block;
-  width: 300px;
+  width: 100%;
   text-align: center;
   margin: 10px auto;
+}
+
+ul li, ol li {
+  margin-left: 20px;
 }
 
 #bizchat-link {
