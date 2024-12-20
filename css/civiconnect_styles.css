@@ -45,18 +45,21 @@ body {
 }
 
 .button {
-  text-decoration: none;
-  color: #52C7FB;
-  padding: 10px 20px;
-  border: 1px solid #52C7FB;
-  border-radius: 25px;
-  transition: background-color 0.3s, color 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 130px;
-  box-sizing: border-box;
+  display: inline-flex; /* For consistent alignment */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  width: 500px; /* Keep the original button size */
+  margin: 20px auto;
+  padding: 10px 20px; /* Ensure consistent button size */
   text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  color: #52C7FB; /* Change text color to match theme */
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #52C7FB; /* Add border */
+  border-radius: 25px; /* Rounded corners */
+  box-sizing: border-box; /* Include border in width calculation */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
 }
 
 .button:hover {
