@@ -3,6 +3,7 @@
   padding: 0 20px; /* Add consistent padding */
   max-width: 1200px; /* Match homepage width */
   width: 90%; /* Ensure responsiveness */
+  text-align: center; /* Center-align text */
 }
 
 .main-content h1 {
