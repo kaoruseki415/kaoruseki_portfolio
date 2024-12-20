@@ -199,8 +199,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for BizChat button (reuse for CiviConnect link) */
-#bizchat-link,
+/* button styling */
+.civiconnect-slide {
+  text-align: center; /* Centers the content inside */
+  display: flex; /* Enable flexbox for better alignment */
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items, if needed */
+}
+
 .civiconnect-slide a {
   display: block;
   align-items: center;
