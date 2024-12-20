@@ -1,3 +1,5 @@
+CiviConnect CSS
+
 * {
   margin: 0;
   padding: 0;
@@ -45,21 +47,18 @@ body {
 }
 
 .button {
-  display: inline-flex; /* For consistent alignment */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  width: 500px; /* Keep the original button size */
-  margin: 20px auto;
-  padding: 10px 20px; /* Ensure consistent button size */
-  text-align: center;
-  font-size: 16px;
   text-decoration: none;
-  color: #52C7FB; /* Change text color to match theme */
-  background-color: transparent; /* Transparent background */
-  border: 1px solid #52C7FB; /* Add border */
-  border-radius: 25px; /* Rounded corners */
-  box-sizing: border-box; /* Include border in width calculation */
-  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  color: #52C7FB;
+  padding: 10px 20px;
+  border: 1px solid #52C7FB;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .button:hover {
@@ -206,34 +205,13 @@ body {
   text-align: center;
 }
 
-#bizchat-link {
-  display: block; /* For consistent alignment */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  width: 500px; /* Keep the original button size */
-  margin: 20px auto;
-  padding: 10px 20px; /* Ensure consistent button size */
-  text-align: center;
-  font-size: 16px;
+.civiconnect-slide a {
   text-decoration: none;
-  color: #52C7FB; /* Change text color to match theme */
-  background-color: transparent; /* Transparent background */
-  border: 1px solid #52C7FB; /* Add border */
-  border-radius: 25px; /* Rounded corners */
-  box-sizing: border-box; /* Include border in width calculation */
-  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  color: black;
 }
 
-/* Hover effect */
-#bizchat-link:hover {
-  background-color: #52C7FB; /* Background color on hover */
-  color: white; /* Text color on hover */
-}
-
-/* Active effect */
-#bizchat-link:active {
-  background-color: #52C7FB; /* Keep hover color for active state */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for pressed state */
+.civiconnect-slide a:hover {
+  text-decoration: underline;
 }
 
 .about, .solution {
