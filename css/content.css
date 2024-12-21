@@ -8,7 +8,6 @@
 .main-content h1 {
   text-align: center; /* Center align the main title */
   font-size: 2.5em; /* Ensure it stands out */
-  max-width: 80%; /* Match the image width (80% of the container) */
   margin: 20px auto; /* Add spacing above and below */
   color: #333; /* Keep consistent styling */
 }
@@ -19,16 +18,14 @@
 .main-content ol {
   text-align: left; /* Left-align all other content */
   max-width: 80%; /* Match the image width (80% of the container) */
-  margin-bottom: 15px; /* Add some spacing for readability */
+  margin-bottom: 15px auto; /* Add some spacing for readability */
   color: #555; /* Softer text color for better readability */
 }
 
 .main-content ul li, 
 .main-content ol li {
   margin-left: 20px; /* Indent list items for clarity */
-  max-width: 80%; /* Match the image width (80% of the container) */
 }
-
 .hero img {
   display: block; /* Ensure it behaves as a block element */
   margin: 0 auto; /* Center the image horizontally */
