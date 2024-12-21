@@ -1,16 +1,22 @@
-.main-content {
-  margin: 40px auto; /* Center content */
-  padding: 0 20px; /* Add consistent padding */
-  max-width: 1200px; /* Match homepage width */
-  width: 90%; /* Ensure responsiveness */
-  text-align: left; /* Center-align text */
+.main-content h1 {
+  text-align: center; /* Center align the main title */
+  font-size: 2.5em; /* Ensure it stands out */
+  margin: 20px auto; /* Add spacing above and below */
+  color: #333; /* Keep consistent styling */
 }
 
-.main-content h1 {
-  text-align: center; /* Center-align the title */
-  margin: 20px auto; /* Add spacing above and below */
-  font-size: 2.5em; /* Adjust font size for better prominence */
-  color: #333; /* Optional: Ensure consistent color */
+.main-content h3, 
+.main-content p, 
+.main-content ul, 
+.main-content ol {
+  text-align: left; /* Left-align all other content */
+  margin-bottom: 15px; /* Add some spacing for readability */
+  color: #555; /* Softer text color for better readability */
+}
+
+.main-content ul li, 
+.main-content ol li {
+  margin-left: 20px; /* Indent list items for clarity */
 }
 
 .hero img {
@@ -22,10 +28,6 @@
   object-fit: contain; /* Ensure the image doesn't distort */
 }
 
-
-.main-content p, .main-content ul, .main-content ol {
-  text-align: left; /* Ensure all paragraphs, lists, and ordered lists are aligned left */
-}
 
 #bizchat-link {
   display: block; /* For consistent alignment */
