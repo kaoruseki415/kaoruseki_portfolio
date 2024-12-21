@@ -7,9 +7,10 @@
 }
 
 .main-content h1 {
-  font-size: 2.5em; /* Consistent title size */
-  color: #333; /* Dark text color for consistency */
-  margin: 20px auto;
+  text-align: center; /* Center-align the title */
+  margin: 20px auto; /* Add spacing above and below */
+  font-size: 2.5em; /* Adjust font size for better prominence */
+  color: #333; /* Optional: Ensure consistent color */
 }
 
 .hero img {
@@ -22,8 +23,8 @@
 }
 
 
-ul li, ol li {
-  margin-left: 20px;
+.main-content p, .main-content ul, .main-content ol {
+  text-align: left; /* Ensure all paragraphs, lists, and ordered lists are aligned left */
 }
 
 #bizchat-link {
