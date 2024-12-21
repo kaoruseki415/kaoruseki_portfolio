@@ -1,3 +1,10 @@
+.main-content {
+  margin: 40px auto; /* Center the content */
+  padding: 0 20px; /* Add some padding for smaller screens */
+  max-width: 80%; /* Match the image width (80% of the container) */
+  text-align: left; /* Align the content to the left */
+}
+
 .main-content h1 {
   text-align: center; /* Center align the main title */
   font-size: 2.5em; /* Ensure it stands out */
