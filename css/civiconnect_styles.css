@@ -176,7 +176,7 @@ body {
 }
 
 .images img {
-  width: 100%;
+  width: 80%;
   height: 300px;
   object-fit: cover; /* Crop the image to fit the specified height */
   object-position: center; /* Align the cropped area to the center */
