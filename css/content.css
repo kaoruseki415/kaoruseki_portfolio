@@ -1,87 +1,69 @@
 .main-content {
-  margin: 40px auto; /* Center the content */
-  padding: 0; /* Add some padding for smaller screens */
-  max-width: 80%; /* Match the image width (80% of the container) */
-  text-align: left; /* Align the content to the left */
+  margin: 40px auto;
+  padding: 0;
+  max-width: 80%;
+  text-align: left;
 }
 
 .main-content h1 {
-  text-align: center; /* Center align the main title */
-  font-size: 2.5em; /* Ensure it stands out */
-  margin: 20px auto; /* Add spacing above and below */
-  color: #333; /* Keep consistent styling 
-  width: 100%; /* Ensure the h1 spans full width */
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px auto;
+  color: #333;
+  width: 100%;
 }
 
+.main-content h2, 
 .main-content h3, 
 .main-content p, 
 .main-content ul, 
 .main-content ol {
-  text-align: left; /* Left-align all other content */
-  max-width: 100%; /* Match the image width (80% of the container) */
-  margin-bottom: 15px o; /* Add some spacing for readability */
-  color: #555; /* Softer text color for better readability */
+  text-align: left;
+  max-width: 100%;
+  margin-bottom: 15px;
+  color: #555;
 }
 
 .main-content ul li, 
 .main-content ol li {
-  margin-left: 20px; /* Indent list items for clarity */
-  width: calc(100% - 20px); /* Adjust for indentation */
+  margin-left: 20px;
+  width: calc(100% - 20px);
 }
+
 .hero img {
-  display: block; /* Ensure it behaves as a block element */
-  margin: 0 auto; /* Center the image horizontally */
-  width: 80%; /* Keep the width at 80% */
-  max-width: 1200px; /* Optional: Set a max width for large screens */
-  height: auto; /* Maintain the aspect ratio */
-  object-fit: contain; /* Ensure the image doesn't distort */
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
 }
 
-
-#bizchat-link {
-  display: block; /* For consistent alignment */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  width: 500px; /* Keep the original button size */
+/* Button styling for project links */
+.project-link {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
   margin: 20px auto;
-  padding: 10px 20px; /* Ensure consistent button size */
+  padding: 10px 20px;
   text-align: center;
   font-size: 16px;
   text-decoration: none;
-  color: #52C7FB; /* Change text color to match theme */
-  background-color: transparent; /* Transparent background */
-  border: 1px solid #52C7FB; /* Add border */
-  border-radius: 25px; /* Rounded corners */
-  box-sizing: border-box; /* Include border in width calculation */
-  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+  color: #52C7FB;
+  background-color: transparent;
+  border: 1px solid #52C7FB;
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect */
-#bizchat-link:hover {
-  background-color: #52C7FB; /* Background color on hover */
-  color: white; /* Text color on hover */
+.project-link:hover {
+  background-color: #52C7FB;
+  color: white;
 }
 
-/* Active effect */
-#bizchat-link:active {
-  background-color: #52C7FB; /* Keep hover color for active state */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for pressed state */
-}
-
-/* Animation: Sliding underline */
-#bizchat-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%; /* Start at the middle */
-  width: 0; /* Start with no underline */
-  height: 3px;
-  background-color: white;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-/* Show underline on hover */
-#bizchat-link:hover::after {
-  width: 100%; /* Expand to full width */
-  left: 0; /* Align to the left */
+.project-link:active {
+  background-color: #52C7FB;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
