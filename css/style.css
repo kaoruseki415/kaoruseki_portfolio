@@ -191,7 +191,7 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  width: 100%; 
+  width: 80%; 
   max-width: 280px; /* Set a consistent max-width for each card */
 }
 .project-card img {
