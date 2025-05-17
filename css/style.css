@@ -195,8 +195,8 @@ body {
   max-width: 280px; /* Set a consistent max-width for each card */
 }
 .project-card img {
-  width: 100%; 
-  height: 200%;
+  width: 100%;
+  height: 200px; /* Or another fixed height */
   object-fit: cover;
   border-radius: 10px;
 }
