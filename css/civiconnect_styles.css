@@ -64,47 +64,65 @@ body {
   color: #fff;
 }
 
-/* Dropdown Button Styling */
+/* Button Styling */
+.button {
+  text-decoration: none;
+  color: #52C7FB;
+  padding: 10px 20px;
+  border: 1px solid #52C7FB;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #52C7FB;
+  color: white;
+}
+
+/* Dropdown Styling */
 .dropdown {
   position: relative;
   display: inline-block;
-  vertical-align: middle; /* Align with other buttons vertically */
-  width: 130px; /* Ensure the same width as other buttons */
+  width: 130px;
 }
 
-/* Dropdown Menu Styles */
 .dropdown .button {
-  padding: 10px 20px;
   width: 130px;
   height: 45px;
-  border: 1px solid #52C7FB; /* Ensure border is consistent */
-  border-radius: 25px; /* Rounded corners */
-  background-color: transparent; /* Set background to transparent to match other buttons */
+  border-radius: 25px;
+  background-color: transparent;
   text-align: center;
-  color: #52C7FB; /* Match the color */
-  box-sizing: border-box;
+  color: #52C7FB;
   cursor: pointer;
 }
 
 .dropdown .button:hover {
-  background-color: #52C7FB; 
-  color: white; 
+  background-color: #52C7FB;
+  color: white;
 }
 
-/* Dropdown Content Styling */
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 0; /* Align dropdown content with button */
+  left: 0;
   background-color: #ffffff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 160px;
   z-index: 1;
   border-radius: 8px;
-  margin-top: 10px; /* Adds some space between the button and the dropdown */
-  padding: 0; /* Remove extra padding for dropdown content */
-  transition: opacity 0.3s ease-in-out;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: visibility 0.3s, opacity 0.3s ease;
   opacity: 0;
+  visibility: hidden;
 }
 
 .dropdown-content a {
