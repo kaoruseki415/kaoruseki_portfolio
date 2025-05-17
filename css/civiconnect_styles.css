@@ -119,9 +119,11 @@ body {
   background-color: #f1f1f1;
 }
 
-/* Ensure dropdown content stays open */
+/* Ensure dropdown stays open when hovering over both button and content */
 .dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
 .dropdown-content:hover {
+  visibility: visible;
   display: block;
   opacity: 1;
 }
