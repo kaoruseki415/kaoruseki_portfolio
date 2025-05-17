@@ -196,7 +196,8 @@ body {
 }
 .project-card img {
   width: 100%; 
-  height: auto;
+  height: 200%;
+  object-fit: cover;
   border-radius: 10px;
 }
 .project-card:hover {
