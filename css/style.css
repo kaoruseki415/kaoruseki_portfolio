@@ -339,3 +339,8 @@ img {
   background-size: contain;
   vertical-align: middle;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
