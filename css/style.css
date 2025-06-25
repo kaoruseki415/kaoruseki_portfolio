@@ -344,3 +344,26 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-lg) 20px;
+  }
+  
+  .hero-section, .project-section {
+    padding: var(--spacing-lg) 20px;
+  }
+  
+  .header-content {
+    padding: 0 20px;
+  }
+  
+  .intro-text {
+    text-align: justify;
+  }
+  
+  .project-card {
+    text-align: justify;
+  }
+}

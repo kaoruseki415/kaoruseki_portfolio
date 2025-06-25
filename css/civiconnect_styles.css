@@ -383,3 +383,26 @@ img {
   justify-content: center;
   text-align: center;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container, .content {
+    padding: var(--spacing-lg) 20px;
+  }
+  
+  .hero, .civiconnect-presentation, .content {
+    padding: var(--spacing-lg) 20px;
+  }
+  
+  .header-content {
+    padding: 0 20px;
+  }
+  
+  .text-container {
+    text-align: justify;
+  }
+  
+  .about-section, .image-text {
+    text-align: justify;
+  }
+}

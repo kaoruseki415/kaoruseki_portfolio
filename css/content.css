@@ -67,3 +67,21 @@
   background-color: #52C7FB;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    max-width: 100%;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  
+  .main-content h1 {
+    text-align: center;
+  }
+  
+  .project-link {
+    width: 100%;
+    max-width: 300px;
+  }
+}
