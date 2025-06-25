@@ -1,130 +1,202 @@
-* {
+/* CSS Variables for Consistency */
+:root {
+  --font-base: 16px;
+  --font-heading: 2.5rem;
+  --font-subheading: 1.5rem;
+  --font-body: 1rem;
+  --color-primary: #52C7FB;
+  --color-bg: #fff;
+  --color-footer-bg: #000;
+  --color-footer-text: #fff;
+  --color-text: #222;
+  --color-link: #52C7FB;
+  --color-link-hover: #fff;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  --border-radius: 10px;
+}
+
+html {
+  font-size: var(--font-base);
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
+  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
   line-height: 1.6;
+  font-size: var(--font-body);
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+h1 { font-size: var(--font-heading); }
+h2 { font-size: var(--font-subheading); }
+h3 { font-size: 1.2rem; }
+
+p, ul, ol {
+  font-size: var(--font-body);
+  margin-bottom: var(--spacing-sm);
+  color: #555;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container, .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* Header Styles */
 .main-header {
-  background: #FFFFFF;
-  padding: 20px;
+  background: var(--color-bg);
+  padding: var(--spacing-md) 0;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
-
-.home-link {
-  color: inherit;
-  display: inline-block;
-  color: #020007;
-  text-decoration: none;
-}
-
-.home-link:hover h1 {
-  color: #52C7FB;
-  cursor: pointer;
-}
-
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--spacing-md);
+}
+.branding h1 {
+  margin-bottom: 0;
+  color: var(--color-primary);
+}
+.branding p {
+  color: #888;
+  font-size: 1rem;
 }
 
+/* Navbar Styles */
+.navbar {
+  position: relative;
+}
 .navbar .buttons {
   display: flex;
-  gap: 20px;
-  margin-left: auto;
-  padding-right: 10px;
+  gap: var(--spacing-sm);
+  align-items: center;
 }
 
 .button {
   text-decoration: none;
-  color: #52C7FB;
-  padding: 10px 20px;
-  border: 1px solid #52C7FB;
+  color: var(--color-primary);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 1px solid var(--color-primary);
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 130px;
-  box-sizing: border-box;
+  min-width: 100px;
   text-align: center;
+  font-size: 1rem;
+  background: transparent;
+}
+.button:hover, .button:focus {
+  background-color: var(--color-primary);
+  color: var(--color-link-hover);
 }
 
-.button:hover {
-  background-color: #52C7FB;
-  color: #fff;
-}
-
-/* Button Styling */
-.button {
-  text-decoration: none;
-  color: #52C7FB;
-  padding: 10px 20px;
-  border: 1px solid #52C7FB;
-  border-radius: 25px;
-  transition: background-color 0.3s, color 0.3s;
-  display: inline-flex;
-  align-items: center;
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
   justify-content: center;
-  width: 130px;
-  box-sizing: border-box;
-  text-align: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 20;
+  transition: background 0.3s;
+  position: relative;
 }
-
-.button:hover {
-  background-color: #52C7FB;
-  color: white;
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--color-primary);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.hamburger:hover {
+  background: rgba(82, 199, 251, 0.08);
+  border-radius: 50%;
 }
 
 /* Dropdown Styling */
 .dropdown {
   position: relative;
   display: inline-block;
-  width: 130px;
 }
-
 .dropdown .button {
-  width: 130px;
+  min-width: 100px;
   height: 45px;
   border-radius: 25px;
   background-color: transparent;
   text-align: center;
-  color: #52C7FB;
+  color: var(--color-primary);
   cursor: pointer;
 }
-
 .dropdown .button:hover {
-  background-color: #52C7FB;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-link-hover);
 }
-
-/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: #ffffff;
+  background-color: var(--color-bg);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 160px;
   z-index: 1;
   border-radius: 8px;
   margin-top: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   transition: visibility 0.3s, opacity 0.3s ease;
   opacity: 0;
   visibility: hidden;
 }
-
 .dropdown-content a {
   color: #333;
   padding: 12px 16px;
@@ -132,188 +204,161 @@ body {
   display: block;
   transition: background-color 0.3s;
 }
-
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-
-/* Ensure dropdown stays open when hovering over both button and content */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content,
-.dropdown-content:hover {
-  visibility: visible;
+.dropdown-content.show {
   display: block;
   opacity: 1;
+  visibility: visible;
 }
 
-.top-image {
-  width: 100%;
-  height: 300px;       /* Fixed height */
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
+/* Responsive Nav */
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: row;
+    padding: 0 var(--spacing-xs);
+  }
+  .navbar .buttons {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--color-bg);
+    flex-direction: column;
+    width: 220px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md) 0;
+    z-index: 15;
+  }
+  .navbar .buttons.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .main-header {
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }
 
-.hero {
-  text-align: center;
-  margin-top: 20px;
+/* Section and Card Styles */
+.hero, .civiconnect-presentation, .content {
+  padding: var(--spacing-lg) var(--spacing-md);
+  background: var(--color-bg);
 }
-
-.about-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.image-text {
+.about-section, .image-text {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-@media (min-width: 950px){
-  .content {
-    max-width: 1200px;
-    width:  90%;
-    margin: 40px auto;
-    padding: 20px;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-  }
+.profile-photo, .top-image, .images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  display: block;
+  margin-top: var(--spacing-md);
 }
-
-@media (max-width: 949px){
-  .content {
-    display: box;
-    width:  90%;
-    margin: 40px auto;
-    padding: 20px;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-  }
+.text-container {
+  max-width: 600px;
+  text-align: left;
 }
-
-.each-contents {
-}
-
-.content div {
-  margin: 5px;
-}
-
-.images img {
-  width: 80%;
-  height: 300px;
-  object-fit: cover; /* Crop the image to fit the specified height */
-  object-position: center; /* Align the cropped area to the center */
-  border-radius: 8px; /* Optional: Adds rounded corners to the image */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-}
-
-.civiconnect-presentation {
-  /* justify-content: center; */
-  /* align-items: center; */
-  min-height: 100px;
-  padding: 20px;
-}
-
-.civiconnect-video {
-  max-width: 100%;
-  text-align: center;
-}
-
-.civiconnect-video iframe {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* button styling */
 .civiconnect-slide {
-  text-align: center; /* Centers inline content */
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Horizontally center items */
-  align-items: center; /* Vertically align if needed */
-  margin-top: 20px; /* Optional spacing above the button */
-}
-
-/* Style the button for proper centering and appearance */
-.civiconnect-slide a {
-  display: inline-flex; /* For consistent alignment */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  width: 500px; /* Keep the original button size */
-  margin: 20px auto;
-  padding: 10px 20px; /* Ensure consistent button size */
-  text-align: center;
-  font-size: 16px;
-  text-decoration: none;
-  color: #52C7FB; /* Change text color to match theme */
-  background-color: transparent; /* Transparent background */
-  border: 1px solid #52C7FB; /* Add border */
-  border-radius: 25px; /* Rounded corners */
-  box-sizing: border-box; /* Include border in width calculation */
-  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
-  white-space: nowrap;
-}
-
-/* Hover and active effects */
-.civiconnect-slide a:hover {
-  background-color: #52C7FB; /* Blue background */
-  color: white; /* White text */
-}
-
-.civiconnect-slide a:active {
-  background-color: #52C7FB; /* Same as hover color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Pressed shadow effect */
-}
-
-
-
-.about, .solution {
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  text-align: left;
-  max-width: 45%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.civiconnect-slide a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: var(--spacing-md) auto;
+  padding: var(--spacing-xs) var(--spacing-md);
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+.civiconnect-slide a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-link-hover);
 }
 
-.about h2, .solution h3 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.about p, .solution p {
-  font-size: 1.2em;
-  color: #666;
-}
-
+/* Footer Styles */
 .main-footer {
-  background-color: black;
-  color: white;
-  padding: 20px;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: var(--spacing-lg) 0 var(--spacing-md) 0;
   text-align: center;
 }
-
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
 }
-
 .footer-link {
-  color: #52C7FB;
+  color: var(--color-link);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-xs);
   font-size: 1.2em;
+  transition: color 0.3s;
+}
+.footer-link:hover {
+  color: var(--color-link-hover);
 }
 
+/* Responsive Footer */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+  .main-footer {
+    padding: var(--spacing-md) 0;
+  }
+}
+
+/* General Responsive Adjustments */
+@media (max-width: 700px) {
+  .container, .hero, .civiconnect-presentation, .content {
+    padding: var(--spacing-md) var(--spacing-xs);
+  }
+  .about-section, .image-text {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  .profile-photo, .top-image, .images img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Icon Styles */
 .iconamoon--email-light, .logos--linkedin-icon, .devicon--github {
   display: inline-block;
   width: 24px;
@@ -321,4 +366,20 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.civiconnect-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

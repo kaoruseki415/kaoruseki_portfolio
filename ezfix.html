@@ -16,12 +16,16 @@
                     <p>UX Researcher/Designer</p>
                 </a>
             </div>
-            <nav class="navbar">
-                <div class="buttons">
+            <nav class="navbar" aria-label="Main Navigation">
+                <button class="hamburger" aria-label="Open navigation menu" aria-controls="main-nav-buttons" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="buttons" id="main-nav-buttons">
                     <a href="index.html" class="button">Home</a>
                     <div class="dropdown">
-                        <button class="button"> Projects </button>
-                        <!-- <a href="#" class="button">Projects</a> -->
+                        <button class="button" aria-haspopup="true" aria-expanded="false"> Projects </button>
                         <div class="dropdown-content">
                             <a href="ezfix.html">EZfix</a>
                             <a href="bizchat.html">BizChat</a>

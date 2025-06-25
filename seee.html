@@ -21,11 +21,16 @@
             <p>UX Researcher/Designer</p>
           </a>
         </div>
-        <nav class="navbar">
-          <div class="buttons">
+        <nav class="navbar" aria-label="Main Navigation">
+          <button class="hamburger" aria-label="Open navigation menu" aria-controls="main-nav-buttons" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="buttons" id="main-nav-buttons">
             <a href="index.html" class="button">Home</a>
             <div class="dropdown">
-              <button class="button">Projects</button>
+              <button class="button" aria-haspopup="true" aria-expanded="false"> Projects </button>
               <div class="dropdown-content">
                 <a href="AIpolicy.html">Student-Driven AI Policy</a>
                 <a href="seee.html">CIDER</a>
@@ -59,7 +64,7 @@
 
       <h2>User & Audiences</h2>
       <ul>
-        <li><b>Primary Users:</b> Teacher candidates from UMBC’s Sherman Center for Early Learning and the Education Department, as well as in-service educators from external institutions--Towson University, and in-service career teachers. These users directly interacted with the SEEe system during the study.</li>
+        <li><b>Primary Users:</b> Teacher candidates from UMBC's Sherman Center for Early Learning and the Education Department, as well as in-service educators from external institutions--Towson University, and in-service career teachers. These users directly interacted with the SEEe system during the study.</li>
         <li><b>Target Audience:</b> Educators, researchers in immersive learning and educational technology, HCI/UX professionals working with VR environments, and developers designing immersive analytics systems for education and decision support.</li>
       </ul>
 
@@ -95,7 +100,7 @@
 
       <h2>Outcomes & Results</h2>
       <ul>
-        <li><b>High engagement:</b> Participants rated Novelty and Stimulation highly (+2.24), appreciating SEEe’s immersive format.</li>
+        <li><b>High engagement:</b> Participants rated Novelty and Stimulation highly (+2.24), appreciating SEEe's immersive format.</li>
         <li><b>Key pain points:</b> Participants struggled with menu navigation and connecting nodes to data elements.</li>
         <li><b>Cognitive load:</b> NASA-TLX scores showed high mental demand but low frustration and physical strain.</li>
         <li><b>Design suggestions:</b> Simplify menus, improve labeling, enable direct manipulation of visualizations.</li>

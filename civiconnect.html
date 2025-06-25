@@ -23,16 +23,21 @@
             <p>UX Researcher/Designer</p>
           </a>
         </div>
-        <nav class="navbar">
-          <div class="buttons">
+        <nav class="navbar" aria-label="Main Navigation">
+          <button class="hamburger" aria-label="Open navigation menu" aria-controls="main-nav-buttons" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="buttons" id="main-nav-buttons">
             <a href="index.html" class="button">Home</a>
             <div class="dropdown">
-              <button class="button"> Projects </button>
-             <div class="dropdown-content">
+              <button class="button" aria-haspopup="true" aria-expanded="false"> Projects </button>
+              <div class="dropdown-content">
                 <a href="AIpolicy.html">Student-Driven AI Policy</a>
                 <a href="seee.html">CIDER</a>
                 <a href="civiconnect.html">CiviConnect</a>
-            </div>
+              </div>
             </div>
             <a href="/resume.pdf" class="button" target="_blank">Resume</a>
           </div>
@@ -48,25 +53,25 @@
     </section>
 
     <!-- Content Section -->
-    <section class="content">
-      <!-- <div class="each-contents"> -->
-        <!-- About Image -->
-        <div class="image-container">
-          <img src="images/civiconnect_group_picture.jpg" alt="CiviConnect group picture" width="500px">
+    <div class="container">
+      <section class="content">
+        <div class="image-text">
+          <div class="image-container">
+            <img src="images/civiconnect_group_picture.jpg" alt="CiviConnect group picture">
+          </div>
+          <div class="text-container">
+            <h2>What is CiviConnect?</h2>
+            <p>
+              CiviConnect is a diverse team of passionate individuals dedicated to creating innovative solutions for underserved communities. Our mission is to provide reliable, affordable, and sustainable internet connectivity to rural and remote areas. By harnessing renewable energy and decentralized networking, we aim to bridge the digital divide, ensuring that no community is left disconnected, especially in times of crisis. Our ultimate goal is to empower these communities by enabling access to essential services, education, and opportunities through dependable communication infrastructure.
+            </p>
+            <h2>What is the solution?</h2>
+            <p>
+              CiviConnect is a solar-powered, self-healing mesh Wi-Fi network designed to provide reliable and affordable internet connectivity to underserved communities, including refugee camps and rural areas.
+            </p>
+          </div>
         </div>
-        <!-- About Content -->
-        <div class="text-container">
-          <h2>What is CiviConnect?</h2>
-          <p>
-            CiviConnect is a diverse team of passionate individuals dedicated to creating innovative solutions for underserved communities. Our mission is to provide reliable, affordable, and sustainable internet connectivity to rural and remote areas. By harnessing renewable energy and decentralized networking, we aim to bridge the digital divide, ensuring that no community is left disconnected, especially in times of crisis. Our ultimate goal is to empower these communities by enabling access to essential services, education, and opportunities through dependable communication infrastructure.
-          </p>
-          <h2>What is the solution?</h3>
-          <p>
-            CiviConnect is a solar-powered, self-healing mesh Wi-Fi network designed to provide reliable and affordable internet connectivity to underserved communities, including refugee camps and rural areas.
-          </p>
-        </div>
-      <!-- </div> -->
-    </section>
+      </section>
+    </div>
 
     <!-- Presentation Video -->
     <section class="civiconnect-presentation">
