@@ -263,13 +263,23 @@ img {
 }
 .project-card img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   border-radius: var(--border-radius);
   display: block;
+  margin-bottom: var(--spacing-sm);
 }
 .project-card:hover {
   transform: scale(0.97);
+}
+
+.project-card h3 {
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-card p {
+  text-align: justify;
 }
 
 /* Footer Styles */
