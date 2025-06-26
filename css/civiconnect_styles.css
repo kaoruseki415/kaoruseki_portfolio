@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.6;
@@ -40,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
@@ -71,14 +71,8 @@ img {
 .main-header {
   background: var(--color-bg);
   padding: var(--spacing-md) 0;
-  border-bottom: 1px solid #ddd;
   position: relative;
   z-index: 10;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
 .header-content {
   display: flex;
@@ -91,10 +85,16 @@ img {
 .branding h1 {
   margin-bottom: 0;
   color: var(--color-primary);
+  font-size: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
 }
 .branding p {
   color: #888;
   font-size: 1rem;
+  margin-top: 4px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 /* Navbar Styles */
@@ -132,36 +132,21 @@ img {
   display: none;
   flex-direction: column;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   background: none;
   border: none;
   z-index: 20;
-  transition: background 0.3s;
-  position: relative;
 }
 .hamburger span {
   height: 4px;
   width: 100%;
   background: var(--color-primary);
-  margin: 5px 0;
+  margin: 4px 0;
   border-radius: 2px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s;
   display: block;
-}
-.hamburger.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-.hamburger:hover {
-  background: rgba(82, 199, 251, 0.08);
-  border-radius: 50%;
 }
 
 /* Dropdown Styling */
@@ -237,13 +222,6 @@ img {
   }
   .hamburger {
     display: flex;
-  }
-  .main-header {
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
   }
 }
 

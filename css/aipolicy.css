@@ -116,10 +116,34 @@
   
   .main-content h1 {
     text-align: center;
+    font-size: 2.2em;
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    left: auto;
+    transform: none;
+    margin: 20px 0;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  
+  .main-content h2 {
+    font-size: 1.6em;
   }
   
   .project-link {
     width: 100%;
     max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content h1 {
+    font-size: 1.9em;
+    margin: 15px 0;
+  }
+  
+  .main-content h2 {
+    font-size: 1.4em;
   }
 } 
