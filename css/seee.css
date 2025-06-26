@@ -1,3 +1,7 @@
+/* SEEe Project Specific Styles */
+
+/* Add SEEe-specific overrides and styles below */
+
 .main-content {
   margin: 40px auto;
   padding: 0;
@@ -118,4 +122,4 @@
     width: 100%;
     max-width: 300px;
   }
-}
+} 
