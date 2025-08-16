@@ -41,8 +41,23 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
           menu.classList.remove('show');
+          // Close mobile menu if open
+          if (navButtons.classList.contains('active')) {
+            navButtons.classList.remove('active');
+            hamburger.classList.remove('open');
+          }
         });
       });
     }
+  });
+
+  // Close mobile menu when clicking on navigation links
+  document.querySelectorAll('.navbar .buttons a:not(.dropdown .button)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (navButtons.classList.contains('active')) {
+        navButtons.classList.remove('active');
+        hamburger.classList.remove('open');
+      }
+    });
   });
 });

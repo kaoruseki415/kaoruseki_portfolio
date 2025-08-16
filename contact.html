@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Contact - Kaoru Seki</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="branding">
+                <a href="index.html" class="home-link">
+                    <h1>Kaoru Seki</h1>
+                    <p>UX Researcher/Designer</p>
+                </a>
+            </div>
+            <nav class="navbar" aria-label="Main Navigation">
+                <button class="hamburger" aria-label="Open navigation menu" aria-controls="main-nav-buttons" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="buttons" id="main-nav-buttons">
+                    <a href="index.html" class="button">Home</a>
+                    <a href="about.html" class="button">About</a>
+                    <a href="projects.html" class="button">Projects</a>
+                    <a href="publications.html" class="button">Publications/Presentations</a>
+                    <a href="/resume.pdf" class="button" target="_blank">Resume/CV</a>
+                    <a href="contact.html" class="button">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="contact-section">
+            <h1>Contact Me</h1>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>I'm always interested in hearing about new opportunities, collaborations, or just connecting with fellow researchers and designers. Feel free to reach out through any of the methods below!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:kaoru2020@umbc.edu">kaoru2020@umbc.edu</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/kaoru-seki415" target="_blank">linkedin.com/in/kaoru-seki415</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/kaoruseki415" target="_blank">github.com/kaoruseki415</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Send me a Message</h2>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <h2>Contact Me!</h2>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/kaoru-seki415" target="_blank" aria-label="LinkedIn" class="footer-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:kaoru2020@umbc.edu" target="_blank" aria-label="Email" class="footer-link">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://github.com/kaoruseki415" target="_blank" aria-label="GitHub" class="footer-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+    
+</body>
+</html>
