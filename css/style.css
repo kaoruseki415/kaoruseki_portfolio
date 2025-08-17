@@ -75,12 +75,12 @@ img {
   z-index: 10;
 }
 .header-content {
+  max-width: 1400px; /* Increased from 1200px to match content width */
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
 }
 .branding h1 {
   margin-bottom: 0;
