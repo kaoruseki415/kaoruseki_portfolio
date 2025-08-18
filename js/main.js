@@ -202,3 +202,75 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Contact form success message handling
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if we're on the contact page and have a success parameter
+  if (window.location.pathname.includes('contact.html') || window.location.pathname.includes('contact')) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    
+    if (success === 'true') {
+      const successMessage = document.getElementById('success-message');
+      if (successMessage) {
+        successMessage.style.display = 'block';
+        successMessage.classList.add('show');
+        
+        // Scroll to the success message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Remove the success parameter from URL without reloading
+        const newUrl = window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
+      }
+    }
+  }
+  
+  // Skills scrolling functionality for project pages
+  const skillsContainers = document.querySelectorAll('.skills-container');
+  skillsContainers.forEach(function(container) {
+    const leftArrow = container.parentElement.querySelector('.scroll-left');
+    const rightArrow = container.parentElement.querySelector('.scroll-right');
+    
+    if (leftArrow && rightArrow) {
+      const scrollAmount = 200;
+      
+      leftArrow.addEventListener('click', function() {
+        container.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+      
+      rightArrow.addEventListener('click', function() {
+        container.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Show/hide arrows based on scroll position
+      container.addEventListener('scroll', function() {
+        if (container.scrollLeft <= 0) {
+          leftArrow.style.opacity = '0.5';
+          leftArrow.style.pointerEvents = 'none';
+        } else {
+          leftArrow.style.opacity = '1';
+          leftArrow.style.pointerEvents = 'auto';
+        }
+        
+        if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 10) {
+          rightArrow.style.opacity = '0.5';
+          rightArrow.style.pointerEvents = 'none';
+        } else {
+          rightArrow.style.opacity = '1';
+          rightArrow.style.pointerEvents = 'auto';
+        }
+      });
+      
+      // Initialize arrow states
+      leftArrow.style.opacity = '0.5';
+      leftArrow.style.pointerEvents = 'none';
+    }
+  });
+});

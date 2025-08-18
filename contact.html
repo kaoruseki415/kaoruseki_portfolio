@@ -77,7 +77,10 @@
 
                 <div class="contact-form-container">
                     <h2>Send me a Message</h2>
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/xayzqjqj" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Portfolio">
+                        <input type="hidden" name="_next" value="https://kaoruseki415.github.io/kaoruseki_portfolio/contact.html?success=true">
+                        
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -100,6 +103,13 @@
                         
                         <button type="submit" class="submit-button">Send Message</button>
                     </form>
+                    
+                    <!-- Success Message (shown when redirected back) -->
+                    <div id="success-message" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. I'll get back to you soon!</p>
+                    </div>
                 </div>
             </div>
         </section>
