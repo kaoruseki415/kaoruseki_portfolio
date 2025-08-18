@@ -20,6 +20,14 @@
   object-fit: cover;
 }
 
+.photo-credit {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
 .main-content {
   max-width: 1400px;
   margin: 0 auto;
