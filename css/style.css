@@ -372,12 +372,14 @@ img {
 }
 
 .cv-button {
-  background: var(--color-primary);
-  color: white;
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .cv-button:hover {
-  background: #3ba8d9;
+  background: var(--color-primary);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(82, 199, 251, 0.3);
 }

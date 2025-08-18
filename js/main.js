@@ -203,6 +203,45 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Timeline scroll functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const timelineScrollBtn = document.getElementById('timeline-scroll-btn');
+  const timelineScrollLeftBtn = document.getElementById('timeline-scroll-left-btn');
+  const timeline = document.querySelector('.timeline');
+  
+  if (timelineScrollBtn && timeline) {
+    timelineScrollBtn.addEventListener('click', function() {
+      // Scroll the timeline to the right by 400px
+      timeline.scrollBy({
+        left: 400,
+        behavior: 'smooth'
+      });
+      
+      // Add a subtle click effect
+      this.style.transform = 'translateY(-50%) scale(0.95)';
+      setTimeout(() => {
+        this.style.transform = 'translateY(-50%)';
+      }, 150);
+    });
+  }
+  
+  if (timelineScrollLeftBtn && timeline) {
+    timelineScrollLeftBtn.addEventListener('click', function() {
+      // Scroll the timeline to the left by 400px
+      timeline.scrollBy({
+        left: -400,
+        behavior: 'smooth'
+      });
+      
+      // Add a subtle click effect
+      this.style.transform = 'translateY(-50%) scale(0.95)';
+      setTimeout(() => {
+        this.style.transform = 'translateY(-50%)';
+      }, 150);
+    });
+  }
+});
+
 // Contact form success message handling
 document.addEventListener('DOMContentLoaded', function() {
   // Check if we're on the contact page and have a success parameter
