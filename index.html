@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Kaoru Seki - Portfolio</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
             <div class="branding">
                 <a href="index.html" class="home-link">
                     <h1>Kaoru Seki</h1>
-                    <p>UX Researcher</p>
+                    <p>HCI Researcher</p>
                 </a>
             </div>
             <nav class="navbar" aria-label="Main Navigation">
@@ -39,49 +39,47 @@
         </div>
     </header>
     
-    <div class="container">
-        <section id="home" class="hero-section">
-            <div class="intro-section">
-                <img src="images/Profile.JPG" alt="Photo of Kaoru Seki" class="profile-photo">
-                <div class="intro-text">
-                    <h1 class="intro-heading" style="text-align: left;">Welcome To My Portfolio</h1>
-                    <p>My name is Kaoru Seki, and I am a Master's student at the University of Maryland, Baltimore County (UMBC), pursuing Human-Centered Computing. I have a background in Business Technology Administration and a passion for understanding the ways technology can serve people better. </p>
-                    <p>Through my journey from learning English as an international student to diving into user experience research, I've cultivated a deep interest in creating accessible, human-centered design solutions. My current research focuses on leveraging generative AI to empower marginalized entrepreneurs, ensuring that technology meets diverse community needs.</p>
-                    <div class="cta-buttons">
-                        <a href="projects.html" class="button cta-primary">View Projects</a>
-                        <a href="/resume.pdf" target="_blank" class="button cta-secondary">Download CV</a>
-                    </div>
-                </div>
+    <!-- Hero Section - Cydney Style -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hello, World 👋</h1>
+                <p class="hero-subtitle">My name is Kaoru. I'm a Graduate Research Assistant at the University of Maryland, Baltimore County (UMBC), and it's lovely to meet you.<br> Check out my work below.<br><br><b>I am applying for Ph.D. programs for 2026.</b></br></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="project-section">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <a href="AIpolicy.html" style="text-decoration: none;">
-                    <img src="images/student-driven.JPG" alt="master thesis">
-                    <h3>Student-Driven AI policy</h3>
+    <!-- Projects Section - Cydney Style -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card" data-number="01">
+                    <a href="AIpolicy.html" class="project-card-link">
+                        <div class="project-number">01</div>
+                        <h3 class="project-title">Student-Driven AI Policy</h3>
+                        <p class="project-description">Co-create student-authored AI policies in design education by investigating how HCC students use generative AI, ensuring policies align with their needs and learning experiences.</p>
+                        <span class="project-link">view project</span>
                     </a>
-                    <p>Explore how students perceive generative AI's role in design education and create Student-Driven AI policy</p>
                 </div>
-                <div class="project-card">
-                    <a href="seee.html" style="text-decoration: none;">
-                    <img src="images/SEEe enviroment.jpg" alt="SEEe Project">
-                    <h3>CIDER</h3>
+                <div class="project-card" data-number="03">
+                    <a href="seee.html" class="project-card-link">
+                        <div class="project-number">02</div>
+                        <h3 class="project-title">CIDER</h3>
+                        <p class="project-description">Evaluate a VR-based immersive analytics system, to understand how multimodal data visualizations support collaborative, inquiry-based learning and user sensemaking in educational contexts.</p>
+                        <span class="project-link">view project</span>
                     </a>
-                    <p>Virtual reality project to understand sensemaking and interaction in immersive environments.</p>
                 </div>
-                <div class="project-card">
-                    <a href="civiconnect.html" style="text-decoration: none;">
-                    <img src="images/CiviConnect.png" alt="CiviConnect Project">
-                    <h3>CiviConnect</h3>
+                <div class="project-card" data-number="02">
+                    <a href="civiconnect.html" class="project-card-link">
+                        <div class="project-number">03</div>
+                        <h3 class="project-title">CiviConnect</h3>
+                        <p class="project-description">Deliver solar-powered, self-healing mesh Wi-Fi to underserved communities, providing affordable, sustainable internet access from rural villages to refugee camps and bridging the digital divide.</p>
+                        <span class="project-link">view project</span>
                     </a>
-                    <p>Solar-powered mesh network for Wi-Fi, focusing on providing connectivity solutions to underserved communities.</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer class="main-footer">
         <h2>Contact Me!</h2>
