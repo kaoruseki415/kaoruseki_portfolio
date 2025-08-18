@@ -251,6 +251,22 @@
   margin-bottom: 2rem;
 }
 
+/* New sections for SEEe page */
+.participants-section {
+  grid-column: 1 / -1; /* Full width for participants */
+  margin-bottom: 2rem;
+}
+
+.system-design-section {
+  grid-column: 1 / -1; /* Full width for system design */
+  margin-bottom: 2rem;
+}
+
+.methods-section {
+  grid-column: 1 / -1; /* Full width for methods */
+  margin-bottom: 2rem;
+}
+
 /* Skills section at bottom */
 .skills-section {
   grid-column: 1 / -1;
