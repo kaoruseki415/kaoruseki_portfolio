@@ -22,6 +22,7 @@
 html {
   font-size: var(--font-base);
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *::before, *::after {
@@ -37,6 +38,9 @@ body {
   line-height: 1.6;
   font-size: var(--font-body);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,6 +69,7 @@ img {
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--spacing-lg) var(--spacing-md);
+  flex: 1;
 }
 
 /* Header Styles */
@@ -655,12 +660,44 @@ img {
   line-height: 1.6;
 }
 
+/* Publications Page Styles */
+.publications-section {
+  flex: 1;
+  padding: var(--spacing-lg) 0;
+}
+
+.publications-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.publications-category {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: #f8f9fa;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--color-primary);
+}
+
+.publications-category h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.publications-category p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Footer Styles */
 .main-footer {
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
   padding: var(--spacing-lg) 0 var(--spacing-md) 0;
   text-align: center;
+  margin-top: auto;
 }
 .footer-links {
   display: flex;
@@ -742,4 +779,17 @@ img {
   .container {
     padding: var(--spacing-md) var(--spacing-sm);
   }
+}
+
+/* Main Content Sections */
+.main-content {
+  flex: 1;
+}
+
+.about-section {
+  flex: 1;
+}
+
+.project-section {
+  flex: 1;
 }
