@@ -615,3 +615,27 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .main-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-tagline p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    height: 280px;
+  }
+  .project-tagline p {
+    font-size: 0.95rem;
+  }
+}
+
