@@ -2,27 +2,26 @@
 .hero {
   text-align: center;
   padding: 2rem 0;
-  /* Removed background color */
 }
 
 .hero-content {
-  max-width: 1400px; /* Increased from 1200px */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .hero-logo {
   width: 100%;
-  height: 675px; /* Changed from 300px to 675px */
+  height: 675px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   display: block;
   margin: 0 auto;
-  object-fit: cover; /* Maintains aspect ratio while fitting the height */
+  object-fit: cover;
 }
 
 .main-content {
-  max-width: 1400px; /* Increased from 1200px */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 3rem 2rem;
 }
@@ -30,8 +29,8 @@
 .main-content h1 {
   text-align: center;
   color: #333;
-  margin-bottom: 1rem; /* Reduced from 2rem to make room for tagline */
-  font-size: 3.5rem; /* Increased from 3rem */
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
   line-height: 1.2;
 }
 
@@ -39,19 +38,19 @@
   text-align: center;
   margin-bottom: 2rem;
   padding: 1rem 2rem;
-  max-width: 1100px; /* Increased from 900px to accommodate longer content */
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .project-tagline p {
   margin: 0;
-  font-size: 1.3rem; /* Increased from 1.1rem */
+  font-size: 1.3rem;
   color: #666;
   font-weight: 500;
-  white-space: nowrap; /* Prevents line breaks */
-  overflow: hidden; /* Hides overflow if needed */
-  text-overflow: ellipsis; /* Adds ellipsis if content is too long */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-tagline strong {
@@ -61,7 +60,7 @@
 .skills-tags {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: -0.5rem; /* Move closer to tagline */
+  margin-top: -0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,12 +107,12 @@
   cursor: grab;
   user-select: none;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .skills-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .skills-container:active {
@@ -142,32 +141,19 @@
   box-shadow: 0 4px 8px rgba(82, 199, 251, 0.4);
 }
 
-/* Responsive design for skill tags */
-@media (max-width: 768px) {
-  .skills-tags {
-    gap: 0.6rem;
-    padding: 0 1rem;
-  }
-  
-  .skill-tag {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
 .main-content h2 {
-  color: #52C7FB; /* Changed to sky blue to match navbar */
+  color: #52C7FB;
   margin: 2rem 0 1rem 0;
-  font-size: 2.5rem; /* Increased from 2.2rem */
-  border-bottom: 2px solid #52C7FB; /* Changed to sky blue */
+  font-size: 2.5rem;
+  border-bottom: 2px solid #52C7FB;
   padding-bottom: 0.5rem;
 }
 
 .main-content p {
   margin-bottom: 1rem;
-  line-height: 1.7; /* Increased from 1.6 */
+  line-height: 1.7;
   color: #555;
-  font-size: 1.2rem; /* Increased from 1.1rem */
+  font-size: 1.2rem;
 }
 
 .main-content ul {
@@ -177,17 +163,16 @@
 
 .main-content li {
   margin-bottom: 0.5rem;
-  line-height: 1.7; /* Increased from 1.6 */
-  font-size: 1.2rem; /* Increased from 1.1rem */
+  line-height: 1.7;
+  font-size: 1.2rem;
 }
 
-/* 2-Column Layout */
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin-top: 2rem;
-  margin-bottom: 2rem; /* Added bottom margin for better spacing */
+  margin-bottom: 2rem;
 }
 
 .content-left, .content-right {
@@ -195,9 +180,8 @@
   flex-direction: column;
 }
 
-/* Ensure proper spacing for methods and next steps sections */
 .content-grid h2 {
-  margin-top: 0; /* Remove top margin for better alignment */
+  margin-top: 0;
   margin-bottom: 1rem;
 }
 
@@ -207,74 +191,34 @@
 }
 
 .content-grid li {
-  margin-bottom: 0.8rem; /* Slightly more space between list items */
+  margin-bottom: 0.8rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .main-content {
-    padding: 2rem 1rem;
-  }
-  
-  .main-content h1 {
-    font-size: 2.5rem; /* Slightly smaller on mobile */
-  }
-  
-  .hero {
-    padding: 1rem 0;
-  }
-  
-  .hero-content {
-    padding: 0 1rem;
-  }
-}
-
-/* Specific section styling */
 .overview-section {
-  grid-column: 1 / -1; /* Full width for overview */
+  grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
 
 .research-questions-section {
-  grid-column: 1 / -1; /* Full width for research questions */
+  grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
 
-.problem-statement-section {
-  grid-column: 1 / -1; /* Full width for problem statement */
-  margin-bottom: 2rem;
-}
-
-/* New sections for SEEe page */
 .participants-section {
-  grid-column: 1 / -1; /* Full width for participants */
+  grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
 
 .system-design-section {
-  grid-column: 1 / -1; /* Full width for system design */
+  grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
 
 .methods-section {
-  grid-column: 1 / -1; /* Full width for methods */
+  grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
 
-/* Skills section at bottom */
-.skills-section {
-  grid-column: 1 / -1;
-  margin-top: 2rem;
-  text-align: center;
-} 
-
-/* Timeline section styling */
 .timeline-section {
   margin: 3rem 0;
   grid-column: 1 / -1;
@@ -297,23 +241,10 @@
   display: none;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 3px;
-  background: linear-gradient(to right, #52C7FB, #3ba8d4);
-  transform: translateY(-50%);
-  border-radius: 2px;
-  z-index: 1;
-}
-
 .timeline-item {
   position: relative;
   flex-shrink: 0;
-  width: 320px; /* Increased width to accommodate more content */
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -339,7 +270,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-top: 4px solid #52C7FB;
   transition: all 0.3s ease;
-  text-align: left; /* Ensure all content is left-aligned */
+  text-align: left;
 }
 
 .timeline-content:hover {
@@ -352,7 +283,7 @@
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   font-weight: 600;
-  text-align: left; /* Left-align titles */
+  text-align: left;
 }
 
 .timeline-content p {
@@ -360,35 +291,14 @@
   color: #555;
   line-height: 1.4;
   font-size: 0.95rem;
-  text-align: left; /* Left-align descriptions */
-}
-
-.timeline-details {
-  margin: 0 0 1rem 0;
-  padding-left: 1.2rem;
-  list-style-type: none;
-}
-
-.timeline-details li {
-  position: relative;
-  margin-bottom: 0.5rem;
-  color: #555;
-  line-height: 1.4;
-  font-size: 0.9rem;
-}
-
-.timeline-details li::before {
-  content: '•';
-  color: #52C7FB;
-  font-weight: bold;
-  position: absolute;
-  left: -1rem;
+  text-align: left;
 }
 
 .workshop-photos {
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid #e9ecef;
+  position: relative;
 }
 
 .workshop-photos h4 {
@@ -399,10 +309,19 @@
 }
 
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  display: flex;
+  overflow-x: auto;
   gap: 0.8rem;
   margin-top: 0.5rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.photo-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .photo-placeholder {
@@ -413,6 +332,14 @@
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
+  flex-shrink: 0;
+  min-width: 200px;
+  max-width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo-placeholder:hover {
@@ -432,35 +359,42 @@
   line-height: 1.2;
 }
 
-/* Responsive photo grid */
-@media (max-width: 768px) {
-  .photo-grid {
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    gap: 0.6rem;
-  }
-  
-  .photo-placeholder {
-    padding: 0.8rem 0.4rem;
-  }
-  
-  .photo-placeholder p {
-    font-size: 1rem;
-  }
-  
-  .photo-placeholder small {
-    font-size: 0.7rem;
-  }
+/* Photo navigation arrows */
+.photo-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #52C7FB;
+  border: 2px solid #52C7FB;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.photo-indicator {
-  display: inline-block;
-  background: #e8f4fd;
-  color: #52C7FB;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid #d1e7f7;
+.photo-nav-arrow:hover {
+  background: #52C7FB;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.photo-nav-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.photo-nav-arrow.prev {
+  left: -20px;
+}
+
+.photo-nav-arrow.next {
+  right: -20px;
 }
 
 .timeline-date {
@@ -475,15 +409,37 @@
   margin-top: 0.5rem;
 }
 
-/* Responsive design for horizontal timeline */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1rem;
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero {
+    padding: 1rem 0;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+  }
+  
   .timeline {
     gap: 1.5rem;
     padding: 1rem 0;
   }
   
   .timeline-item {
-    width: 280px; /* Slightly smaller on mobile for better fit */
+    width: 280px;
   }
   
   .timeline-content {
@@ -498,12 +454,48 @@
     font-size: 0.9rem;
   }
   
-  .timeline-details li {
-    font-size: 0.85rem;
+  .photo-grid {
+    gap: 0.6rem;
+    padding: 0.3rem 0;
   }
   
-  .photo-indicator {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+  .photo-placeholder {
+    padding: 0.8rem 0.4rem;
+    min-width: 100px;
+    max-width: 100px;
   }
-} 
+  
+  .photo-placeholder p {
+    font-size: 1rem;
+  }
+  
+  .photo-placeholder small {
+    font-size: 0.7rem;
+  }
+  
+  .skills-tags {
+    gap: 0.6rem;
+    padding: 0 1rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-placeholder {
+    min-width: 90px;
+    max-width: 90px;
+    padding: 0.6rem 0.3rem;
+  }
+  
+  .photo-placeholder p {
+    font-size: 0.9rem;
+  }
+  
+  .photo-placeholder small {
+    font-size: 0.65rem;
+  }
+}

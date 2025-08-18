@@ -148,3 +148,57 @@ document.addEventListener('DOMContentLoaded', function() {
     updateArrowVisibility(); // Initial state
   }
 });
+
+// Photo navigation functionality for workshop photos
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.workshop-photos').forEach(function(workshopSection) {
+    const photoGrid = workshopSection.querySelector('.photo-grid');
+    const prevArrow = workshopSection.querySelector('.photo-nav-arrow.prev');
+    const nextArrow = workshopSection.querySelector('.photo-nav-arrow.next');
+    
+    if (photoGrid && prevArrow && nextArrow) {
+      const scrollAmount = 220; // Scroll by photo width + gap
+      
+      // Previous photo
+      prevArrow.addEventListener('click', function() {
+        photoGrid.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Next photo
+      nextArrow.addEventListener('click', function() {
+        photoGrid.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Show/hide arrows based on scroll position
+      photoGrid.addEventListener('scroll', function() {
+        // Show/hide prev arrow
+        if (photoGrid.scrollLeft <= 0) {
+          prevArrow.style.opacity = '0.5';
+          prevArrow.style.pointerEvents = 'none';
+        } else {
+          prevArrow.style.opacity = '1';
+          prevArrow.style.pointerEvents = 'auto';
+        }
+        
+        // Show/hide next arrow
+        if (photoGrid.scrollLeft >= photoGrid.scrollWidth - photoGrid.clientWidth - 10) {
+          nextArrow.style.opacity = '0.5';
+          nextArrow.style.pointerEvents = 'none';
+        } else {
+          nextArrow.style.opacity = '1';
+          nextArrow.style.pointerEvents = 'auto';
+        }
+      });
+      
+      // Initialize arrow states
+      prevArrow.style.opacity = '0.5';
+      prevArrow.style.pointerEvents = 'none';
+    }
+  });
+});
