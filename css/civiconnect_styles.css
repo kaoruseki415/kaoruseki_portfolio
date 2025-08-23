@@ -324,21 +324,20 @@ body {
   margin: 0 auto;
 }
 
-/* Outcomes Top Level - Text + Team Photo */
-.outcomes-top {
+/* Outcomes Text Section */
+.outcomes-text {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Outcomes Media Section - Image and Video Side by Side */
+.outcomes-media {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  margin-bottom: 3rem;
+  width: 100%;
   align-items: start;
-}
-
-.outcomes-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem 2rem 2rem 0;
-  min-height: 400px;
 }
 
 .outcomes-text p {
@@ -584,25 +583,20 @@ body {
   }
   
   /* Outcomes Layout Mobile Styles */
-  .outcomes-top {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .outcomes-text {
+    padding: 1.5rem;
+    text-align: center;
     margin-bottom: 2rem;
   }
   
-  .outcomes-text {
-    padding-right: 0;
-    text-align: center;
+  .outcomes-media {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .team-photo {
     max-width: 400px;
     height: 320px;
-  }
-  
-  .outcomes-bottom {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
   
   .outcomes-item.video iframe,

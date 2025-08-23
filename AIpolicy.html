@@ -127,32 +127,6 @@
                 <h3>Workshop 1</h3>
                 <p>Brainstorming policy recommendations through candid conversations</p>
                 <span class="timeline-date">March 28, 2025</span>
-                
-                <!-- Photo Section for Workshop 1 -->
-                <div class="workshop-photos">
-                  <h4>Workshop Photos</h4>
-                  <button class="photo-nav-arrow prev" aria-label="Previous photo">
-                    <i class="fas fa-chevron-left"></i>
-                  </button>
-                  <div class="photo-grid">
-                    <!-- Replace these placeholder divs with your actual photos -->
-                    <div class="photo-placeholder">
-                      <p>📸 Photo 1</p>
-                      <small>Add your Google Drive photo here</small>
-                    </div>
-                    <div class="photo-placeholder">
-                      <p>📸 Photo 2</p>
-                      <small>Add your Google Drive photo here</small>
-                    </div>
-                    <div class="photo-placeholder">
-                      <p>📸 Photo 3</p>
-                      <small>Add your Google Drive photo here</small>
-                    </div>
-                  </div>
-                  <button class="photo-nav-arrow next" aria-label="Next photo">
-                    <i class="fas fa-chevron-right"></i>
-                  </button>
-                </div>
               </div>
             </div>
             
@@ -162,32 +136,6 @@
                 <h3>Workshop 2</h3>
                 <p>Curating policy recommendations through student-authored zine making</p>
                 <span class="timeline-date">April 11, 2025</span>
-                
-                <!-- Photo Section for Workshop 2 -->
-                <div class="workshop-photos">
-                  <h4>Workshop Photos</h4>
-                  <button class="photo-nav-arrow prev" aria-label="Previous photo">
-                    <i class="fas fa-chevron-left"></i>
-                  </button>
-                  <div class="photo-grid">
-                    <!-- Replace these placeholder divs with your actual photos -->
-                    <div class="photo-placeholder">
-                      <p>📸 Photo 1</p>
-                      <small>Add your Google Drive photo here</small>
-                    </div>
-                    <div class="photo-placeholder">
-                      <p>📸 Photo 2</p>
-                      <small>Add your Google Drive photo here</small>
-                    </div>
-                    <div class="photo-placeholder">
-                      <p>📸 Photo 3</p>
-                      <small>Add your Google Drive photo here</small>
-                    </div>
-                  </div>
-                  <button class="photo-nav-arrow next" aria-label="Next photo">
-                    <i class="fas fa-chevron-right"></i>
-                  </button>
-                </div>
               </div>
             </div>
             
@@ -242,6 +190,238 @@
           </button>
         </div>
 
+        <div class="workshop-photos-section">
+          <h2>Workshop Photos</h2>
+          
+          <div class="workshop-photos-container">
+            <div class="workshop-group">
+              <h3>Workshop 1</h3>
+              <div class="workshop-photo-nav">
+                <button class="scroll-arrow prev" onclick="scrollPhotos('workshop1', -1)" aria-label="Scroll photos left">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="photo-grid" id="workshop1-grid">
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4517.JPG" alt="Workshop 1 - Group discussion" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4517.JPG', 'Workshop 1 - Group discussion')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4519.JPG" alt="Workshop 1 - Participant interaction" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4519.JPG', 'Workshop 1 - Participant interaction')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4520.JPG" alt="Workshop 1 - Collaborative work" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4520.JPG', 'Workshop 1 - Collaborative work')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4521.JPG" alt="Workshop 1 - Group activity" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4521.JPG', 'Workshop 1 - Group activity')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4524.JPG" alt="Workshop 1 - Discussion session" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4524.JPG', 'Workshop 1 - Discussion session')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4525.JPG" alt="Workshop 1 - Participant engagement" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4525.JPG', 'Workshop 1 - Participant engagement')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4526.JPG" alt="Workshop 1 - Group collaboration" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4526.JPG', 'Workshop 1 - Group collaboration')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4528.JPG" alt="Workshop 1 - Workshop environment" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4528.JPG', 'Workshop 1 - Workshop environment')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4529.JPG" alt="Workshop 1 - Interactive session" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4529.JPG', 'Workshop 1 - Interactive session')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4530.JPG" alt="Workshop 1 - Group discussion" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4530.JPG', 'Workshop 1 - Group discussion')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4531.JPG" alt="Workshop 1 - Participant activity" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4531.JPG', 'Workshop 1 - Participant activity')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4532.JPG" alt="Workshop 1 - Collaborative work" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4532.JPG', 'Workshop 1 - Collaborative work')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4533.JPG" alt="Workshop 1 - Group interaction" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4533.JPG', 'Workshop 1 - Group interaction')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4534.JPG" alt="Workshop 1 - Workshop session" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4534.JPG', 'Workshop 1 - Workshop session')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4535.JPG" alt="Workshop 1 - Participant discussion" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4535.JPG', 'Workshop 1 - Participant discussion')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4538.JPG" alt="Workshop 1 - Group activity" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4538.JPG', 'Workshop 1 - Group activity')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4541.JPG" alt="Workshop 1 - Interactive workshop" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4541.JPG', 'Workshop 1 - Interactive workshop')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4543.JPG" alt="Workshop 1 - Participant engagement" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4543.JPG', 'Workshop 1 - Participant engagement')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4547.JPG" alt="Workshop 1 - Group collaboration" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4547.JPG', 'Workshop 1 - Group collaboration')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4549.JPG" alt="Workshop 1 - Workshop environment" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4549.JPG', 'Workshop 1 - Workshop environment')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4550.JPG" alt="Workshop 1 - Interactive session" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4550.JPG', 'Workshop 1 - Interactive session')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4551.JPG" alt="Workshop 1 - Group discussion" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4551.JPG', 'Workshop 1 - Group discussion')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop1/IMG_4552.JPG" alt="Workshop 1 - Participant activity" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop1/IMG_4552.JPG', 'Workshop 1 - Participant activity')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                </div>
+                <button class="scroll-arrow next" onclick="scrollPhotos('workshop1', 1)" aria-label="Scroll photos right">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="workshop-group">
+              <h3>Workshop 2</h3>
+              <div class="workshop-photo-nav">
+                <button class="scroll-arrow prev" onclick="scrollPhotos('workshop2', -1)" aria-label="Scroll photos left">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="photo-grid" id="workshop2-grid">
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3063.JPG" alt="Workshop 2 - Zine making session" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3063.JPG', 'Workshop 2 - Zine making session')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3064.JPG" alt="Workshop 2 - Creative process" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3064.JPG', 'Workshop 2 - Creative process')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3065.JPG" alt="Workshop 2 - Participant work" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3065.JPG', 'Workshop 2 - Participant work')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3067.JPG" alt="Workshop 2 - Zine creation" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3067.JPG', 'Workshop 2 - Zine creation')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3068.JPG" alt="Workshop 2 - Collaborative zine making" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3068.JPG', 'Workshop 2 - Collaborative zine making')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3071.JPG" alt="Workshop 2 - Workshop activity" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3071.JPG', 'Workshop 2 - Workshop activity')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3072.JPG" alt="Workshop 2 - Participant engagement" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3072.JPG', 'Workshop 2 - Participant engagement')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3073.JPG" alt="Workshop 2 - Zine workshop" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3073.JPG', 'Workshop 2 - Zine workshop')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3074.JPG" alt="Workshop 2 - Creative workshop" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3074.JPG', 'Workshop 2 - Creative workshop')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="workshop-photo-container">
+                    <img src="images/workshop2/IMG_3075.JPG" alt="Workshop 2 - Workshop session" class="workshop-photo">
+                    <button class="maximize-btn" onclick="openPhotoModal('images/workshop2/IMG_3075.JPG', 'Workshop 2 - Workshop session')">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                </div>
+                <button class="scroll-arrow next" onclick="scrollPhotos('workshop2', 1)" aria-label="Scroll photos right">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="responsibilities-section">
           <h2>Responsibilities</h2>
           <ul>
@@ -264,6 +444,21 @@
         </div>
       </div>
     </section>
+    
+    <!-- Photo Modal -->
+    <div id="photoModal" class="photo-modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closePhotoModal()">&times;</button>
+        <button class="modal-nav-arrow prev" onclick="navigateModal(-1)" aria-label="Previous photo">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="modalPhoto" class="modal-photo" src="" alt="">
+        <button class="modal-nav-arrow next" onclick="navigateModal(1)" aria-label="Next photo">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    
     </footer>
   </body>
 </html>

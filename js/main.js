@@ -313,3 +313,178 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Workshop photo scrolling functionality
+function scrollPhotos(workshopId, direction) {
+  const grid = document.getElementById(workshopId + '-grid');
+  if (!grid) return;
+  
+  const scrollAmount = 400; // Scroll by 400px each time
+  const currentScroll = grid.scrollLeft;
+  
+  if (direction === 1) {
+    // Scroll right
+    grid.scrollTo({
+      left: currentScroll + scrollAmount,
+      behavior: 'smooth'
+    });
+  } else {
+    // Scroll left
+    grid.scrollTo({
+      left: currentScroll - scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+  
+  // Update arrow states after scrolling
+  setTimeout(() => {
+    updatePhotoArrowStates(workshopId);
+  }, 400);
+}
+
+// Update arrow states based on scroll position
+function updatePhotoArrowStates(workshopId) {
+  const grid = document.getElementById(workshopId + '-grid');
+  const navContainer = grid.closest('.workshop-photo-nav');
+  const prevArrow = navContainer.querySelector('.scroll-arrow.prev');
+  const nextArrow = navContainer.querySelector('.scroll-arrow.next');
+  
+  if (!grid || !prevArrow || !nextArrow) return;
+  
+  // Check if we can scroll left
+  if (grid.scrollLeft <= 0) {
+    prevArrow.disabled = true;
+    prevArrow.style.opacity = '0.5';
+  } else {
+    prevArrow.disabled = false;
+    prevArrow.style.opacity = '1';
+  }
+  
+  // Check if we can scroll right
+  if (grid.scrollLeft >= grid.scrollWidth - grid.clientWidth - 10) {
+    nextArrow.disabled = true;
+    nextArrow.style.opacity = '0.5';
+  } else {
+    nextArrow.disabled = false;
+    nextArrow.style.opacity = '1';
+  }
+}
+
+// Initialize photo arrow states when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const workshopGrids = document.querySelectorAll('.workshop-photo-nav .photo-grid');
+  workshopGrids.forEach(function(grid) {
+    const workshopId = grid.id.replace('-grid', '');
+    updatePhotoArrowStates(workshopId);
+    
+    // Update arrow states when scrolling manually
+    grid.addEventListener('scroll', function() {
+      updatePhotoArrowStates(workshopId);
+    });
+  });
+});
+
+// Photo modal functionality
+let currentPhotoIndex = 0;
+let currentWorkshopPhotos = [];
+
+function openPhotoModal(imageSrc, imageAlt) {
+  const modal = document.getElementById('photoModal');
+  const modalPhoto = document.getElementById('modalPhoto');
+  
+  // Find which workshop this photo belongs to and get all photos
+  const workshop1Photos = Array.from(document.querySelectorAll('#workshop1-grid .workshop-photo-container img')).map(img => ({
+    src: img.src,
+    alt: img.alt
+  }));
+  
+  const workshop2Photos = Array.from(document.querySelectorAll('#workshop2-grid .workshop-photo-container img')).map(img => ({
+    src: img.src,
+    alt: img.alt
+  }));
+  
+  // Determine which workshop and find the index
+  let foundIndex = -1;
+  if (workshop1Photos.some(photo => photo.src.includes(imageSrc.split('/').pop()))) {
+    currentWorkshopPhotos = workshop1Photos;
+    foundIndex = workshop1Photos.findIndex(photo => photo.src.includes(imageSrc.split('/').pop()));
+  } else if (workshop2Photos.some(photo => photo.src.includes(imageSrc.split('/').pop()))) {
+    currentWorkshopPhotos = workshop2Photos;
+    foundIndex = workshop2Photos.findIndex(photo => photo.src.includes(imageSrc.split('/').pop()));
+  }
+  
+  currentPhotoIndex = foundIndex >= 0 ? foundIndex : 0;
+  
+  modalPhoto.src = imageSrc;
+  modalPhoto.alt = imageAlt;
+  modal.classList.add('show');
+  
+  // Update navigation arrows
+  updateModalNavigation();
+  
+  // Prevent body scrolling when modal is open
+  document.body.style.overflow = 'hidden';
+}
+
+function closePhotoModal() {
+  const modal = document.getElementById('photoModal');
+  modal.classList.remove('show');
+  
+  // Restore body scrolling
+  document.body.style.overflow = 'auto';
+}
+
+function navigateModal(direction) {
+  if (currentWorkshopPhotos.length === 0) return;
+  
+  currentPhotoIndex += direction;
+  
+  // Handle wrapping around
+  if (currentPhotoIndex < 0) {
+    currentPhotoIndex = currentWorkshopPhotos.length - 1;
+  } else if (currentPhotoIndex >= currentWorkshopPhotos.length) {
+    currentPhotoIndex = 0;
+  }
+  
+  const photo = currentWorkshopPhotos[currentPhotoIndex];
+  const modalPhoto = document.getElementById('modalPhoto');
+  
+  modalPhoto.src = photo.src;
+  modalPhoto.alt = photo.alt;
+  
+  // Update navigation arrows
+  updateModalNavigation();
+}
+
+function updateModalNavigation() {
+  const prevArrow = document.querySelector('.modal-nav-arrow.prev');
+  const nextArrow = document.querySelector('.modal-nav-arrow.next');
+  
+  if (currentWorkshopPhotos.length <= 1) {
+    // Disable both arrows if there's only one photo
+    prevArrow.disabled = true;
+    nextArrow.disabled = true;
+  } else {
+    // Enable both arrows for multiple photos
+    prevArrow.disabled = false;
+    nextArrow.disabled = false;
+  }
+}
+
+// Close modal when clicking outside the image
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('photoModal');
+  
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closePhotoModal();
+    }
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      closePhotoModal();
+    }
+  });
+});
