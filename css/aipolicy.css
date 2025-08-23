@@ -342,11 +342,8 @@
 }
 
 .workshop-photos {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
-  position: relative;
-  overflow: hidden;
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
 }
 
 .workshop-photos h4 {
@@ -650,5 +647,346 @@
   
   .photo-placeholder small {
     font-size: 0.65rem;
+  }
+}
+
+/* Workshop Photos Section */
+.workshop-photos-section {
+  margin: 4rem 0;
+  padding: 2rem 0;
+}
+
+.workshop-photos-section h2 {
+  text-align: left;
+  color: #52C7FB;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.workshop-photos-container {
+  width: 100%;
+  margin: 0;
+}
+
+.workshop-group {
+  margin-bottom: 3rem;
+}
+
+.workshop-group h3 {
+  color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.workshop-group p {
+  text-align: left;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.workshop-group .photo-grid {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  width: 100%;
+  min-height: 200px;
+}
+
+.workshop-group .photo-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.workshop-photo-container {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.workshop-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.workshop-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Maximize button styling */
+.maximize-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.workshop-photo-container:hover .maximize-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.maximize-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.maximize-btn i {
+  font-size: 14px;
+}
+
+/* Modal for enlarged photos */
+.photo-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+}
+
+.photo-modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modal navigation arrows */
+.modal-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.modal-nav-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-nav-arrow.prev {
+  left: -70px;
+}
+
+.modal-nav-arrow.next {
+  right: -70px;
+}
+
+.modal-nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(1);
+}
+
+.modal-nav-arrow:disabled:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1);
+}
+
+.workshop-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Workshop photo navigation arrows */
+.workshop-photo-nav {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.workshop-photo-nav .photo-grid {
+  padding: 0 50px; /* Space for arrows */
+}
+
+.workshop-photo-nav .scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #52C7FB;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(82, 199, 251, 0.3);
+  z-index: 10;
+}
+
+.workshop-photo-nav .scroll-arrow:hover {
+  background-color: #3ba8d4;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.workshop-photo-nav .scroll-arrow.prev {
+  left: 0;
+}
+
+.workshop-photo-nav .scroll-arrow.next {
+  right: 0;
+}
+
+.workshop-photo-nav .scroll-arrow:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(1);
+}
+
+/* Responsive adjustments for workshop photos */
+@media (max-width: 768px) {
+  .workshop-group .photo-grid {
+    gap: 0.8rem;
+  }
+  
+  .workshop-photo-container {
+    width: 240px;
+    height: 150px;
+  }
+  
+  .workshop-photos-section h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+  
+  .workshop-group h3 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  
+  .workshop-photo-nav .scroll-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .workshop-photo-nav .photo-grid {
+    padding: 0 45px;
+  }
+  
+  .maximize-btn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .maximize-btn i {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workshop-group .photo-grid {
+    gap: 0.6rem;
+  }
+  
+  .workshop-photo-container {
+    width: 180px;
+    height: 110px;
+  }
+  
+  .workshop-photos-section h2 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+  
+  .workshop-group h3 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  
+  .workshop-photo-nav .scroll-arrow {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .workshop-photo-nav .photo-grid {
+    padding: 0 40px;
+  }
+  
+  .maximize-btn {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .maximize-btn i {
+    font-size: 10px;
   }
 }
