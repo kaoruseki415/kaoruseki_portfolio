@@ -488,3 +488,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Abstract dropdown functionality
+function toggleAbstract(abstractId) {
+  const abstractContent = document.getElementById(abstractId);
+  const toggleButton = abstractContent.previousElementSibling;
+  const toggleText = toggleButton.querySelector('.toggle-text');
+  const toggleIcon = toggleButton.querySelector('.toggle-icon');
+  
+  if (abstractContent.style.display === 'none' || abstractContent.style.display === '') {
+    abstractContent.style.display = 'block';
+    toggleText.textContent = 'Hide Abstract';
+    toggleIcon.classList.remove('fa-chevron-down');
+    toggleIcon.classList.add('fa-chevron-up');
+  } else {
+    abstractContent.style.display = 'none';
+    toggleText.textContent = 'Show Abstract';
+    toggleIcon.classList.remove('fa-chevron-up');
+    toggleIcon.classList.add('fa-chevron-down');
+  }
+}
