@@ -508,3 +508,72 @@ function toggleAbstract(abstractId) {
     toggleIcon.classList.add('fa-chevron-down');
   }
 }
+
+// Zine navigation functionality
+let currentZineIndex = 1;
+const totalZines = 3;
+
+const zinePages = [
+  {
+    title: "Zine 1: AI Policy Recommendations",
+    content: "Welcome to our first zine exploring student perspectives on AI policy in education. This interactive zine captures the voices and recommendations from our workshop participants.",
+    description: "Click 'View Interactive Zines on Figma' to explore the full interactive experience with page-flipping animations and detailed content."
+  },
+  {
+    title: "Zine 2: Collaborative Insights",
+    content: "Our second zine delves deeper into collaborative discussions and policy recommendations that emerged from group activities during our workshops.",
+    description: "Navigate through the zines to discover different perspectives and recommendations from our student participants."
+  },
+  {
+    title: "Zine 3: Final Recommendations",
+    content: "The final zine presents synthesized policy recommendations and insights that can inform AI integration in educational settings.",
+    description: "Explore the comprehensive findings and actionable recommendations developed through our participatory design process."
+  }
+];
+
+function updateZineDisplay() {
+  const zinePage = document.getElementById('zinePage');
+  const currentZineSpan = document.getElementById('currentZine');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  if (!zinePage || !currentZineSpan || !prevBtn || !nextBtn) return;
+  
+  const currentZine = zinePages[currentZineIndex - 1];
+  
+  zinePage.innerHTML = `
+    <div class="zine-placeholder">
+      <h3>${currentZine.title}</h3>
+      <p>${currentZine.content}</p>
+      <p style="margin-top: 1rem; font-style: italic; color: #888;">${currentZine.description}</p>
+    </div>
+  `;
+  
+  currentZineSpan.textContent = currentZineIndex;
+  
+  // Update button states
+  prevBtn.disabled = currentZineIndex === 1;
+  nextBtn.disabled = currentZineIndex === totalZines;
+}
+
+function nextZine() {
+  if (currentZineIndex < totalZines) {
+    currentZineIndex++;
+    updateZineDisplay();
+  }
+}
+
+function prevZine() {
+  if (currentZineIndex > 1) {
+    currentZineIndex--;
+    updateZineDisplay();
+  }
+}
+
+// Initialize zine display when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  // Only initialize if we're on the AI policy page and zine elements exist
+  if (document.getElementById('zinePage')) {
+    updateZineDisplay();
+  }
+});

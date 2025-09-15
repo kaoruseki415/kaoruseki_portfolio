@@ -990,3 +990,117 @@
     font-size: 10px;
   }
 }
+
+/* Interactive Zines Section */
+.interactive-zines-section {
+  margin: 4rem 0;
+  padding: 2rem 0;
+}
+
+.interactive-zines-section h2 {
+  text-align: left;
+  color: #52C7FB;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.interactive-zines-section p {
+  text-align: left;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.figma-prototype-container {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  background: white;
+  padding: 1rem;
+}
+
+.figma-prototype-iframe {
+  width: 100%;
+  height: 800px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+}
+
+.figma-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #52C7FB;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(82, 199, 251, 0.3);
+  font-size: 1.1rem;
+}
+
+.figma-link:hover {
+  background-color: #3ba8d4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(82, 199, 251, 0.4);
+}
+
+.figma-link i {
+  font-size: 1.3rem;
+}
+
+/* Responsive adjustments for interactive zines */
+@media (max-width: 768px) {
+  .interactive-zines-section h2 {
+    font-size: 2rem;
+  }
+  
+  .figma-prototype-container {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  
+  .figma-prototype-iframe {
+    height: 650px;
+  }
+  
+  .figma-access-info {
+    padding: 1rem;
+  }
+  
+  .figma-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-zines-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .figma-prototype-container {
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+  }
+  
+  .figma-prototype-iframe {
+    height: 500px;
+  }
+  
+  .figma-access-info {
+    padding: 0.8rem;
+  }
+  
+  .figma-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
