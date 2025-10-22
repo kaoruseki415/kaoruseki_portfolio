@@ -44,7 +44,7 @@
 
 .project-tagline {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
   padding: 1rem 2rem;
   max-width: 1100px;
   margin-left: auto;
@@ -67,8 +67,8 @@
 
 .skills-tags {
   text-align: center;
-  margin-bottom: 2rem;
-  margin-top: -0.5rem;
+  margin-bottom: 2rem !important;
+  margin-top: -0.5rem !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,6 +311,7 @@
 
 .timeline-content {
   width: 100%;
+  height: 280px;
   padding: 1.5rem;
   background: white;
   border-radius: 12px;
@@ -318,6 +319,9 @@
   border-top: 4px solid #52C7FB;
   transition: all 0.3s ease;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .timeline-content:hover {
@@ -339,6 +343,7 @@
   line-height: 1.4;
   font-size: 0.95rem;
   text-align: left;
+  flex-grow: 2;
 }
 
 .workshop-photos {
@@ -445,13 +450,15 @@
 .timeline-date {
   display: inline-block;
   background: #f8f9fa;
+  letter-spacing: 0.5px;
   color: #52C7FB;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
   border: 1px solid #e9ecef;
-  margin-top: 0.5rem;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .timeline-scroll-indicator {
@@ -548,6 +555,7 @@
   
   .timeline-content {
     padding: 1.2rem;
+    height: 260px;
   }
   
   .timeline-content h3 {
@@ -1102,5 +1110,165 @@
   .figma-link {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+  }
+}
+
+/* Project Navigation Section */
+.project-navigation {
+  margin: 4rem 0 2rem 0;
+  padding: 2rem 0;
+  background: #fff;
+  display: block !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 300px;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.left-link {
+  justify-content: flex-start;
+}
+
+.right-link {
+  justify-content: flex-end;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.nav-link:hover .nav-content {
+  box-shadow: 0 8px 25px rgba(82, 199, 251, 0.2);
+  border: 2px solid #52C7FB;
+}
+
+.left-link .nav-content {
+  flex-direction: row;
+}
+
+.right-link .nav-content {
+  flex-direction: row;
+}
+
+.nav-arrow {
+  width: 40px;
+  height: 40px;
+  background: #52C7FB;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-arrow {
+  background: #3ba8d4;
+  transform: scale(1.1);
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.nav-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.nav-title {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-title {
+  text-align: center;
+  flex: 1;
+}
+
+/* Responsive Design for Project Navigation */
+@media (max-width: 768px) {
+  .project-navigation {
+    margin: 3rem 0 1.5rem 0;
+    padding: 1.5rem 0;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .nav-link {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .nav-content {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .nav-title {
+    font-size: 1.1rem;
+  }
+  
+  .nav-label {
+    font-size: 0.8rem;
+  }
+  
+  .nav-arrow {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-content {
+    padding: 1rem 1.2rem;
+  }
+  
+  .nav-title {
+    font-size: 1rem;
+  }
+  
+  .nav-arrow {
+    width: 30px;
+    height: 30px;
   }
 }

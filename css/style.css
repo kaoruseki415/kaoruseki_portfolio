@@ -397,6 +397,144 @@ img {
   box-shadow: 0 8px 20px rgba(82, 199, 251, 0.3);
 }
 
+/* Announcement Section */
+.announcement-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.announcement-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #3ba8d4 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(82, 199, 251, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.announcement-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.announcement-text {
+  flex: 1;
+  text-align: left;
+}
+
+.announcement-title {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.announcement-description {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.announcement-description a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.announcement-description a:hover {
+  color: #3ba8d4;
+  border-bottom-color: var(--color-primary);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(82, 199, 251, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(82, 199, 251, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(82, 199, 251, 0.3);
+  }
+}
+
+/* Responsive Design for Announcement */
+@media (max-width: 768px) {
+  .announcement-section {
+    padding: 2rem 0;
+  }
+  
+  .announcement-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .announcement-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .announcement-icon i {
+    font-size: 1.2rem;
+  }
+  
+  .announcement-title {
+    font-size: 1.5rem;
+  }
+  
+  .announcement-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement-content {
+    gap: 1rem;
+  }
+  
+  .announcement-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .announcement-icon i {
+    font-size: 1.1rem;
+  }
+  
+  .announcement-title {
+    font-size: 1.3rem;
+  }
+  
+  .announcement-description {
+    font-size: 0.95rem;
+  }
+}
+
 /* Projects Section - Cydney Style */
 .projects-section {
   padding: 6rem 0;
