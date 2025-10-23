@@ -1,3 +1,25 @@
+// Sticky header scroll functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.main-header');
+  
+  if (header) {
+    let lastScrollTop = 0;
+    
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Add scrolled class when user scrolls down more than 50px
+      if (scrollTop > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScrollTop = scrollTop;
+    });
+  }
+});
+
 // Hamburger menu toggle for responsive navigation
 
 document.addEventListener('DOMContentLoaded', function () {

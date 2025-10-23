@@ -78,7 +78,7 @@ body {
 .project-tagline {
   text-align: center;
   margin-bottom: 2rem !important;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -86,7 +86,7 @@ body {
 
 .project-tagline p {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.6rem !important;
   color: #666;
   font-weight: 500;
   white-space: nowrap;
@@ -105,7 +105,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -140,16 +139,11 @@ body {
 
 .skills-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  max-width: 1000px;
+  justify-content: center;
+  max-width: 100%;
   padding: 0.5rem 0;
-  cursor: grab;
-  user-select: none;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 .skills-container::-webkit-scrollbar {
@@ -163,9 +157,9 @@ body {
 .skill-tag {
   background-color: white;
   color: #52C7FB;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 25px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   display: inline-block;
   transition: all 0.3s ease;
@@ -192,9 +186,22 @@ body {
 
 .main-content p {
   margin-bottom: 1rem;
-  line-height: 1.7;
+  line-height: 1.6;
   color: #555;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+/* Standardize all body text across sections */
+.overview-section p,
+.problem-statement-section p,
+.solution-section p,
+.content-grid p,
+.content-grid li,
+.team-section p,
+.outcomes-text p {
+  font-size: 1.4rem !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
 }
 
 .main-content ul {
@@ -421,6 +428,22 @@ body {
   }
 }
 
+/* Additional responsive styles for better mobile experience */
+@media (max-width: 320px) {
+  .nav-content {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-title {
+    font-size: 0.8rem;
+  }
+  
+  .nav-arrow {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .cost-comparison h3 {
   text-align: center;
   color: #333;
@@ -471,7 +494,7 @@ body {
 }
 
 .team-section h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
@@ -483,8 +506,8 @@ body {
 
 /* Outcomes Text Section */
 .outcomes-text {
-  margin-bottom: 3rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  padding: 0;
   text-align: left;
 }
 
@@ -498,10 +521,11 @@ body {
 }
 
 .outcomes-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: #555;
   margin: 0;
+  text-align: left;
 }
 
 .outcomes-text a {
@@ -741,8 +765,8 @@ body {
   
   /* Outcomes Layout Mobile Styles */
   .outcomes-text {
-    padding: 1.5rem;
-    text-align: center;
+    padding: 0;
+    text-align: left;
     margin-bottom: 2rem;
   }
   
@@ -787,6 +811,191 @@ body {
   }
   .project-tagline p {
     font-size: 0.95rem;
+  }
+}
+
+/* Comprehensive mobile responsive design for CiviConnect page */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tagline {
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-tagline p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .skills-tags {
+    margin: 1rem 0 2rem 0;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .scroll-arrow {
+    display: none;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: fit-content;
+    max-width: calc(50% - 0.2rem);
+  }
+  
+  .skills-tags {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .cost-comparison {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cost-comparison h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .comparison-table {
+    font-size: 0.9rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.6rem 0.4rem;
+  }
+  
+  .mesh-network-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .mesh-network-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mesh-network-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .mesh-diagram {
+    margin: 1.5rem 0;
+  }
+  
+  .mesh-diagram img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem 0.8rem;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .project-tagline {
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tagline p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .skills-tags {
+    margin: 0.8rem 0 1.5rem 0;
+    padding: 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    min-width: fit-content;
+    max-width: calc(50% - 0.15rem);
+  }
+  
+  
+  .cost-comparison {
+    padding: 1rem 0.8rem;
+  }
+  
+  .cost-comparison h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .comparison-table {
+    font-size: 0.8rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.4rem 0.2rem;
+  }
+  
+  .mesh-network-section {
+    padding: 1rem 0.8rem;
+  }
+  
+  .mesh-network-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .mesh-network-section p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+  
+  .mesh-diagram {
+    margin: 1rem 0;
   }
 }
 

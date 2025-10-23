@@ -1,3 +1,12 @@
+/* Prevent horizontal overflow globally */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 /* AI Policy Page Specific Styles */
 .hero {
   text-align: center;
@@ -45,7 +54,7 @@
 .project-tagline {
   text-align: center;
   margin-bottom: 2rem !important;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -53,7 +62,7 @@
 
 .project-tagline p {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.6rem !important;
   color: #666;
   font-weight: 500;
   white-space: nowrap;
@@ -72,7 +81,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -80,19 +88,7 @@
 }
 
 .scroll-arrow {
-  background-color: #52C7FB;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(82, 199, 251, 0.3);
-  flex-shrink: 0;
+  display: none;
 }
 
 .scroll-arrow:hover {
@@ -107,14 +103,15 @@
 
 .skills-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
-  overflow-x: auto;
+  justify-content: center;
+  align-items: center;
   scroll-behavior: smooth;
-  max-width: 1000px;
+  max-width: 100%;
   padding: 0.5rem 0;
   cursor: grab;
   user-select: none;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -130,9 +127,9 @@
 .skill-tag {
   background-color: white;
   color: #52C7FB;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 25px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   display: inline-block;
   transition: all 0.3s ease;
@@ -159,9 +156,9 @@
 
 .main-content p {
   margin-bottom: 1rem;
-  line-height: 1.7;
+  line-height: 1.6;
   color: #555;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .main-content ul {
@@ -171,8 +168,27 @@
 
 .main-content li {
   margin-bottom: 0.5rem;
-  line-height: 1.7;
-  font-size: 1.2rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Standardize all body text across sections */
+.overview-section p,
+.research-questions-section p,
+.findings-section p,
+.responsibilities-section li,
+.interactive-zines-section p,
+.content-grid p,
+.content-grid li,
+.participants-section p,
+.participants-section li,
+.methods-section p,
+.methods-section li,
+.system-design-section p,
+.system-design-section li,
+.problem-statement-section p {
+  font-size: 1.3rem !important;
+  line-height: 1.6 !important;
 }
 
 .content-grid {
@@ -341,7 +357,7 @@
   margin: 0 0 1rem 0;
   color: #555;
   line-height: 1.4;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: left;
   flex-grow: 2;
 }
@@ -1017,7 +1033,7 @@
   text-align: left;
   color: #666;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -1270,5 +1286,444 @@
   .nav-arrow {
     width: 30px;
     height: 30px;
+  }
+}
+
+/* Additional responsive styles for better mobile experience */
+@media (max-width: 320px) {
+  .nav-content {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-title {
+    font-size: 0.8rem;
+  }
+  
+  .nav-arrow {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Comprehensive mobile responsive design for AI Policy page */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .project-tagline {
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .project-tagline p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+    word-wrap: break-word;
+  }
+  
+  .skills-tags {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-tag {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    min-width: fit-content;
+    max-width: calc(50% - 0.2rem);
+  }
+  
+  .timeline-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .timeline {
+    min-width: max-content;
+  }
+  
+  .timeline-content {
+    min-width: 280px;
+    word-wrap: break-word;
+  }
+  
+  .timeline-content p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .workshop-photos-section {
+    overflow-x: hidden;
+  }
+  
+  .workshop-photo-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .photo-grid {
+    min-width: max-content;
+  }
+  
+  .workshop-photo {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .interactive-zines-section {
+    overflow-x: hidden;
+  }
+  
+  .figma-prototype-container {
+    overflow-x: hidden;
+  }
+  
+  .figma-prototype-iframe {
+    width: 100% !important;
+    max-width: 100%;
+    height: 400px;
+  }
+  
+  .overview-section, .research-questions-section, .responsibilities-section, .findings-section, .content-grid, .participants-section, .methods-section, .system-design-section, .problem-statement-section {
+    overflow-x: hidden;
+    word-wrap: break-word;
+  }
+  
+  .overview-section p, .research-questions-section p, .findings-section p, .content-grid p, .content-grid li, .participants-section p, .participants-section li, .methods-section p, .methods-section li, .system-design-section p, .system-design-section li, .problem-statement-section p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .responsibilities-section li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  
+  .skills-tags {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .timeline-container {
+    margin: 2rem 0;
+  }
+  
+  .timeline-content {
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .timeline-date {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem 0.8rem;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .project-tagline {
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tagline p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .skills-tags {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .timeline-container {
+    margin: 1.5rem 0;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .timeline-content p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .timeline-date {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .interactive-zines-section {
+    padding: 1.5rem 0;
+  }
+  
+  .interactive-zines-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .figma-prototype-container {
+    padding: 0.8rem;
+  }
+  
+  .figma-prototype-container h3 {
+    font-size: 1rem;
+  }
+  
+  .figma-prototype-container p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* SEEE page specific responsive styles */
+@media (max-width: 768px) {
+  .see-environment-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .see-environment-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .see-environment-section p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .see-environment-section img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+  
+  .see-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .see-feature {
+    padding: 1rem;
+  }
+  
+  .see-feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .see-feature p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem 0.8rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+  
+  .project-tagline {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .project-tagline p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  
+  .skills-tags {
+    margin: 0.8rem 0 1.5rem 0;
+    padding: 0 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    min-width: fit-content;
+    max-width: calc(50% - 0.15rem);
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+    min-width: 250px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .timeline-date {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .workshop-photo {
+    width: 180px;
+    height: 130px;
+  }
+  
+  .figma-prototype-iframe {
+    height: 350px;
+  }
+  
+  .interactive-zines-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .figma-prototype-container p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .overview-section h2, .research-questions-section h2, .responsibilities-section h2, .findings-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .overview-section p, .research-questions-section p, .findings-section p, .content-grid p, .content-grid li, .participants-section p, .participants-section li, .methods-section p, .methods-section li, .system-design-section p, .system-design-section li, .problem-statement-section p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .responsibilities-section ul {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .responsibilities-section li {
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  
+  .see-environment-section {
+    padding: 1rem 0.8rem;
+  }
+  
+  .see-environment-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .see-environment-section p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .see-features {
+    gap: 0.8rem;
+  }
+  
+  .see-feature {
+    padding: 0.8rem;
+  }
+  
+  .see-feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .see-feature p {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
   }
 }
