@@ -467,6 +467,19 @@ img {
   box-shadow: 0 8px 20px rgba(82, 199, 251, 0.3);
 }
 
+.google-scholar-button {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.google-scholar-button:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(82, 199, 251, 0.3);
+}
+
 /* Announcement Section */
 .announcement-section {
   padding: 3rem 0;
@@ -475,13 +488,19 @@ img {
   border-bottom: 1px solid #e9ecef;
 }
 
+.announcements-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .announcement-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -557,11 +576,16 @@ img {
     padding: 2rem 0;
   }
   
+  .announcements-wrapper {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
   .announcement-content {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0;
   }
   
   .announcement-icon {
