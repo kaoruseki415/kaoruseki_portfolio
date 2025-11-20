@@ -110,12 +110,13 @@ img {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Branding size remains the same when scrolled */
 .main-header.scrolled .branding h1 {
-  font-size: 1.4rem;
+  font-size: var(--font-heading);
 }
 
 .main-header.scrolled .branding p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .header-content {
   max-width: 1400px; /* Increased from 1200px to match content width */
@@ -395,11 +396,85 @@ img {
   padding: 8rem 0 6rem 0;
   background: var(--color-bg);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(82, 199, 251, 0.1) 0%, rgba(82, 199, 251, 0.2) 100%);
+  border: 3px solid rgba(82, 199, 251, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(82, 199, 251, 0.15);
+  animation: gentleBounce 3s ease-in-out infinite;
+}
+
+.bubble-left {
+  width: 350px;
+  height: 350px;
+  left: 5%;
+  top: 15%;
+  animation-delay: 0s;
+}
+
+.bubble-right {
+  right: 10%;
+  bottom: 15%;
+  top: auto;
+  animation-delay: 1.5s;
+}
+
+.bubble-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bubble-right .bubble-image {
+  object-position: center 70%;
+
+}
+
+.bubble-placeholder {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
 }
 
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-title {
@@ -1290,7 +1365,7 @@ img {
   }
   
   .main-header.scrolled .branding h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   
   .branding p {
@@ -1298,7 +1373,7 @@ img {
   }
   
   .main-header.scrolled .branding p {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
   
   .main-footer {
@@ -1333,7 +1408,7 @@ img {
   }
   
   .main-header.scrolled .branding h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .branding p {
@@ -1341,7 +1416,7 @@ img {
   }
   
   .main-header.scrolled .branding p {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   
   .main-footer {
@@ -1401,6 +1476,28 @@ img {
     text-align: center;
   }
   
+  .bubble {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .bubble-left {
+    width: 160px;
+    height: 160px;
+    left: -3%;
+    top: 15%;
+  }
+  
+  .bubble-right {
+    right: 2%;
+    bottom: 15%;
+    top: auto;
+  }
+  
+  .bubble-placeholder {
+    font-size: 2.5rem;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1458,8 +1555,28 @@ img {
   
   .cta-button {
     width: 180px;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+  }
+  
+  .bubble {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bubble-left {
+    width: 130px;
+    height: 130px;
+    left: -2%;
+    top: 10%;
+  }
+  
+  .bubble-right {
+    right: 1%;
+    bottom: 10%;
+    top: auto;
+  }
+  
+  .bubble-placeholder {
+    font-size: 2rem;
   }
   
   .container {
