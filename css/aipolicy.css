@@ -176,6 +176,7 @@ body {
 .overview-section p,
 .research-questions-section p,
 .findings-section p,
+.findings-section li,
 .responsibilities-section li,
 .interactive-zines-section p,
 .content-grid p,
@@ -186,7 +187,8 @@ body {
 .methods-section li,
 .system-design-section p,
 .system-design-section li,
-.problem-statement-section p {
+.problem-statement-section p,
+.publication-section p {
   font-size: 1.3rem !important;
   line-height: 1.6 !important;
 }
@@ -216,6 +218,49 @@ body {
 
 .content-grid li {
   margin-bottom: 0.8rem;
+}
+
+.publication-section {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.publication-section p {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem !important;
+  line-height: 1.6 !important;
+}
+
+.publication-section a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+.publication-section a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.poster-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poster-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .overview-section {
@@ -1415,12 +1460,12 @@ body {
     height: 400px;
   }
   
-  .overview-section, .research-questions-section, .responsibilities-section, .findings-section, .content-grid, .participants-section, .methods-section, .system-design-section, .problem-statement-section {
+  .overview-section, .research-questions-section, .responsibilities-section, .findings-section, .content-grid, .participants-section, .methods-section, .system-design-section, .problem-statement-section, .publication-section {
     overflow-x: hidden;
     word-wrap: break-word;
   }
   
-  .overview-section p, .research-questions-section p, .findings-section p, .content-grid p, .content-grid li, .participants-section p, .participants-section li, .methods-section p, .methods-section li, .system-design-section p, .system-design-section li, .problem-statement-section p {
+  .overview-section p, .research-questions-section p, .findings-section p, .findings-section li, .content-grid p, .content-grid li, .participants-section p, .participants-section li, .methods-section p, .methods-section li, .system-design-section p, .system-design-section li, .problem-statement-section p, .publication-section p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 1.4rem !important;
@@ -1488,6 +1533,11 @@ body {
   .project-tagline p {
     font-size: 1.4rem !important;
     line-height: 1.6 !important;
+  }
+  
+  .poster-images-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .skills-tags {
@@ -1678,9 +1728,14 @@ body {
     font-size: 1.8rem;
   }
   
-  .overview-section p, .research-questions-section p, .findings-section p, .content-grid p, .content-grid li, .participants-section p, .participants-section li, .methods-section p, .methods-section li, .system-design-section p, .system-design-section li, .problem-statement-section p {
+  .overview-section p, .research-questions-section p, .findings-section p, .findings-section li, .content-grid p, .content-grid li, .participants-section p, .participants-section li, .methods-section p, .methods-section li, .system-design-section p, .system-design-section li, .problem-statement-section p, .publication-section p {
     font-size: 1.4rem !important;
     line-height: 1.6 !important;
+  }
+  
+  .poster-images-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
   }
   
   .responsibilities-section ul {

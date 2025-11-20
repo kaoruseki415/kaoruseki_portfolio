@@ -72,7 +72,8 @@ p, ul, ol {
 .content-grid p,
 .content-grid li,
 .team-section p,
-.outcomes-text p {
+.outcomes-text p,
+.publication-section p {
   font-size: 1rem !important;
   line-height: 1.6 !important;
 }
@@ -543,16 +544,71 @@ img {
 }
 
 .announcement-description a {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 2px solid transparent;
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: normal;
   transition: all 0.3s ease;
 }
 
 .announcement-description a:hover {
-  color: #3ba8d4;
-  border-bottom-color: var(--color-primary);
+  color: #004499;
+  text-decoration: underline;
+}
+
+/* Recent Updates Styles */
+.recent-updates-title {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.update-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-date {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  min-width: 150px;
+  text-align: right;
+}
+
+.update-description {
+  flex: 1;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.update-description a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+.update-description a:hover {
+  color: #004499;
+  text-decoration: underline;
 }
 
 @keyframes pulse {
@@ -591,6 +647,32 @@ img {
   .announcement-icon {
     width: 50px;
     height: 50px;
+  }
+  
+  .recent-updates-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .updates-list {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .update-item {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  
+  .update-date {
+    min-width: auto;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .update-description {
+    font-size: 1rem;
   }
   
   .announcement-icon i {
@@ -1484,14 +1566,14 @@ img {
 }
 
 .contact-details a {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: normal;
   transition: color 0.3s ease;
 }
 
 .contact-details a:hover {
-  color: #3ba8d4;
+  color: #004499;
   text-decoration: underline;
 }
 
