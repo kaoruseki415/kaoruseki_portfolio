@@ -43,19 +43,29 @@ body {
   padding: 3rem 2rem;
 }
 
+.main-content p,
+.main-content li {
+  font-size: var(--font-body);
+}
+
 .main-content h1 {
   text-align: center;
   color: #333;
+  margin-top: -1rem;
   margin-bottom: 1rem;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   line-height: 1.2;
+}
+
+.main-content h2 {
+  font-size: 2.2rem;
 }
 
 .project-tagline {
   text-align: center;
-  margin-bottom: 2rem !important;
-  padding: 1.5rem 2rem;
-  max-width: 1100px;
+  margin-bottom: 1rem !important;
+  padding: 1rem 2rem;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -66,8 +76,6 @@ body {
   color: #666;
   font-weight: 500;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .project-tagline strong {
@@ -77,7 +85,7 @@ body {
 .skills-tags {
   text-align: center;
   margin-bottom: 2rem !important;
-  margin-top: -0.5rem !important;
+  margin-top: -1rem !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +157,7 @@ body {
 .main-content h2 {
   color: #52C7FB;
   margin: 2rem 0 1rem 0;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   border-bottom: 2px solid #52C7FB;
   padding-bottom: 0.5rem;
 }
@@ -179,6 +187,7 @@ body {
 .findings-section li,
 .responsibilities-section li,
 .interactive-zines-section p,
+.zine-section p,
 .content-grid p,
 .content-grid li,
 .participants-section p,
@@ -289,7 +298,7 @@ body {
 }
 
 .timeline-section {
-  margin: 3rem 0;
+  margin: 2rem 0;
   grid-column: 1 / -1;
 }
 
@@ -307,7 +316,7 @@ body {
   transform: translateY(-50%);
   color: var(--color-primary);
   padding: 1rem 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   z-index: 10;
   opacity: 0.8;
   transition: all 0.3s ease;
@@ -721,8 +730,8 @@ body {
 
 /* Workshop Photos Section */
 .workshop-photos-section {
-  margin: 4rem 0;
-  padding: 2rem 0;
+  margin: 2rem 0;
+  padding: 0;
 }
 
 .workshop-photos-section h2 {
@@ -739,7 +748,7 @@ body {
 }
 
 .workshop-group {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .workshop-group h3 {
@@ -1078,7 +1087,7 @@ body {
   text-align: left;
   color: #666;
   margin-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.6;
 }
 
