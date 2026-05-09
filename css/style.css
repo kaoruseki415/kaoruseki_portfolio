@@ -1213,6 +1213,17 @@ img {
   margin: 0;
 }
 
+.publications-category .equal-contribution {
+  font-size: 0.9em;
+  color: #666;
+  margin-left: 0.35rem;
+  white-space: nowrap;
+}
+
+.education-title-black {
+  color: #555 !important;
+}
+
 /* Abstract Dropdown Styles */
 .abstract-dropdown {
   margin-top: var(--spacing-md);
