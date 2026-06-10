@@ -511,6 +511,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Project abstract dropdown (keeps the "Abstract" label, only toggles the chevron)
+function toggleProjectAbstract(abstractId) {
+  const abstractContent = document.getElementById(abstractId);
+  const toggleButton = abstractContent.previousElementSibling;
+  const toggleIcon = toggleButton.querySelector('.toggle-icon');
+
+  const isOpen = abstractContent.style.display === 'block';
+  abstractContent.style.display = isOpen ? 'none' : 'block';
+  toggleIcon.classList.toggle('fa-chevron-down', isOpen);
+  toggleIcon.classList.toggle('fa-chevron-up', !isOpen);
+}
+
 // Abstract dropdown functionality
 function toggleAbstract(abstractId) {
   const abstractContent = document.getElementById(abstractId);
